@@ -27,6 +27,13 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @user = User.find_by(id: params[:id])
+    if @user
+      @user.delete!
+    else
+      flash.now[:errors] = ['User or Id does not exist']
+      render :json
+    end
   end
 
   private
