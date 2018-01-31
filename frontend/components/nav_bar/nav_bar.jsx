@@ -9,21 +9,23 @@ class NavBar extends React.Component {
 
   render() {
     const display = this.props.currentUser ? (
-      <div>
+      <div className='navbar-links'>
         <p>Hello, { this.props.currentUser.username }</p>
         <button onClick={this.props.logout}>Logout</button>
       </div>
     ) : (
-      <div>
+      <div className='navbar-links'>
+        <Link to='/'>Become a Host</Link>
+        <Link to='/'>Help</Link>
         <Link className='signup' to='/signup'>Sign Up</Link>
         <Link className='login' to='/login'>Log In</Link>
       </div>
     );
     return (
-      <div>
-        <span className='logo'>
+      <div className='navbar'>
+        <span>
           <Link to='/'>
-            <img src='https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg'/>
+            <img id='logo' src='https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg'/>
           </Link>
         </span>
         {display}

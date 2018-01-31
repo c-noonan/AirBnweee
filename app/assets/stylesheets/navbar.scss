@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: 80px;
+  font-family: Helvetica;
+  font-size: 13px;
+  color: #686868;
+  letter-spacing: 0.07em;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 33px 5px;
+  margin: 0px 5px;
+  margin-bottom: -10px;
+}
+
+.navbar-links * {
+  padding-left: 6px;
+  padding-right: 6px;
+  margin: 0px 7px;
+}
+
+#logo {
+  width: 82px;
+  height: 80px;
+}
+
+.navbar-links *:hover {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
