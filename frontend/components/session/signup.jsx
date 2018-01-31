@@ -19,6 +19,16 @@ class Signup extends React.Component {
     };
   }
 
+  demoLogin(e){
+    const demo = {
+      username: 'username',
+      password: 'password'
+    };
+    e.preventDefault(e);
+    this.props.createNewUser(demo)
+      .then(() => this.props.history.push('/'));
+  }
+
   render() {
     return(
       <div className='session-form'>
@@ -40,6 +50,7 @@ class Signup extends React.Component {
               />
           </label>
           <button onClick={(e) => this.handleSubmit(e)}>Sign Up</button>
+          <button onClick={(e) => this.demoLogin(e)}>Demo Login</button>
         </form>
       </div>
     );
