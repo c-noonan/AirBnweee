@@ -1,8 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as APIUtil from './util/session';
+import configureStore from './store/store';
+import Root from './components/root';
 
 document.addEventListener("DOMContentLoaded", () => {
   const rootEl = document.getElementById('root');
-  ReactDOM.render(<h1>Airbnweee...</h1>, rootEl);
+  let preloadedState = undefined;
+  if (window.currentUser) {
+    preloadedState = {
+      session: {
+        currentUser: window.currentUser
+      }
+    };
+  }
+  const store = configureStore(preloadedState);
+  ReactDOM.render(<Root store={store} />, rootEl);
 });

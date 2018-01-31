@@ -22,6 +22,25 @@ class Signup extends React.Component {
   render() {
     return(
       <div className='session-form'>
+        <form>
+          <label>Username:
+            <input
+              type='text'
+              placeholder='Pick a Username'
+              value={this.state.username}
+              onChange={this.updateForm('username')}
+              />
+          </label>
+          <label>Password:
+            <input
+              type='password'
+              placeholder='Create a Password'
+              value={this.state.password}
+              onChange={this.updateForm('password')}
+              />
+          </label>
+          <button onClick={(e) => this.handleSubmit(e)}>Sign Up</button>
+        </form>
       </div>
     );
   }
