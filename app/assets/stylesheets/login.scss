@@ -35,6 +35,12 @@
 
 }
 
+.login-form span p:last-child {
+  padding-left: 10px;
+  color: blue;
+  text-decoration: underline;
+}
+
 #username {
   display: flex;
   justify-content: flex-start;

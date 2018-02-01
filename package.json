@@ -7,7 +7,8 @@
     "babel-preset-react": "^6.24.1",
     "react-modal": "^3.1.11",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "webpack": "^3.10.0"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
