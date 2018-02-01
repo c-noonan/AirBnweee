@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.destroy_all
+User.delete_all
 User.create( { username: 'courtney', password: 'password', image_url: 'https://images.unsplash.com/photo-1499651681375-8afc5a4db253?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f9f43ca802159f80c4b1715a80477441&auto=format&fit=crop&w=1974&q=80' } )
 User.create( { username: 'katie', password: 'password', image_url: 'https://images.unsplash.com/photo-1489899705168-17c923a57a6e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=70740fca6b6a48863ad3770ec71c2b9a&auto=format&fit=crop&w=634&q=80' } )
 User.create( { username: 'alex', password: 'password', image_url: 'https://images.unsplash.com/photo-1502307941281-4447b53562f9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=345bbc3edc569525e68b1e360929de02&auto=format&fit=crop&w=634&q=80' } )

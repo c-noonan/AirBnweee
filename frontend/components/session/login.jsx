@@ -5,7 +5,6 @@ class Login extends React.Component {
   constructor(props){
     super(props);
     this.state = { username: '', password: '' };
-    this.demoLogin = this.demoLogin.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -21,38 +20,32 @@ class Login extends React.Component {
     };
   }
 
-  demoLogin(e){
-    const demo = {
-      username: 'username',
-      password: 'password'
-    };
-    e.preventDefault(e);
-    this.props.login(demo)
-      .then(() => this.props.history.push('/'));
-  }
-
   render() {
     return(
       <div className='login-form'>
         <form>
-          <label>Username:
-            <input
+          <div>&times;</div>
+          <label id='username'>
+            <input id='username-input'
               type='text'
               placeholder='Username'
               value={this.state.username}
               onChange={this.updateForm('username')}
               />
           </label>
-          <label>Password:
-            <input
+          <label id='password'>
+            <input id='password-input'
               type='password'
               placeholder='Password'
               value={this.state.password}
               onChange={this.updateForm('password')}
               />
           </label>
-          <button onClick={this.handleSubmit}>Log In</button>
-          <button onClick={this.demoLogin}>Demo Login</button>
+          <button id='button' onClick={this.handleSubmit}>Log In</button>
+          <span>
+            <p>Don't have an account?</p>
+            <p>Sign Up!</p>
+          </span>
         </form>
       </div>
     );

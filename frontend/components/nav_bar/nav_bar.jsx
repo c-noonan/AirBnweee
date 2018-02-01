@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SignupContainer from '../session/signup_container';
+import LoginContainer from '../session/login_container';
+import Session from '../session/session';
 
 class NavBar extends React.Component {
 
@@ -17,8 +20,8 @@ class NavBar extends React.Component {
       <div className='navbar-links'>
         <Link to='/'>Become a Host</Link>
         <Link to='/'>Help</Link>
-        <Link className='signup' to='/signup'>Sign Up</Link>
-        <Link className='login' to='/login'>Log In</Link>
+        <Link to='/'>Sign Up</Link>
+        <Link to='/'>Log In</Link>
       </div>
     );
     return (

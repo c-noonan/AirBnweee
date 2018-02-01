@@ -1,0 +1,77 @@
+.session-form {
+  display: flex;
+  justify-content: center;
+  font-family: Helvetica Neue;
+  color: white;
+}
+
+.session-form div {
+  display: block;
+  color: rgb(118, 118, 118);
+  width: 40px;
+  height: 40px;
+  font-size: 50px;
+  font-weight: 100;
+  padding: 10px 5px;
+}
+
+// .session-form span {
+//   display: flex;
+//   justify-content: center;
+//   color: #686868;
+// }
+
+#username {
+  display: flex;
+  justify-content: flex-start;
+  color: #686868;
+  margin: 20px 5px;
+  padding: 5px 5px;
+  width: 504px;
+  height: 46px;
+  border: 1px solid #D3D3D3;
+  border-radius: 4px;
+}
+
+#username-input {
+  padding-left: 7px;
+  width: 500px;
+}
+
+#password {
+  display: flex;
+  justify-content: flex-start;
+  color: #686868;
+  margin: 20px 5px;
+  padding: 5px 5px;
+  width: 504px;
+  height: 46px;
+  border: 1px solid #D3D3D3;
+  border-radius: 4px;
+}
+
+#password-input {
+  padding-left: 7px;
+  width: 500px;
+}
+
+#button {
+  display: flex;
+  justify-content: center;
+  background-color: #FD595F;
+  margin: 20px 5px;
+  padding: 5px 5px;
+  width: 504px;
+  height: 46px;
+  font-size: 19px;
+  border-radius: 4px;
+  letter-spacing: 0.07em;
+}
+
+::-webkit-input-placeholder {
+  color: #686868;
+  font-weight: 100;
+  letter-spacing: 0.07em;
+  font-family: Helvetica Neue;
+  font-size: 19px;
+}
