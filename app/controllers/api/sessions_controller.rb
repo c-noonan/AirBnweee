@@ -8,9 +8,9 @@ class Api::SessionsController < ApplicationController
       params[:user][:username],
       params[:user][:password]
     )
-    if @user.save!
+    if @user
       login(@user)
-      render '/'
+      render '/api/users/show'
     else
       render json: ['Invalid username or password'], status: 401
     end
@@ -24,7 +24,7 @@ class Api::SessionsController < ApplicationController
   #
   # def show
   # end
-  #
+
   # def index
   # end
 
@@ -32,7 +32,7 @@ class Api::SessionsController < ApplicationController
     @user = current_user
     if @user
       logout
-      render '/'
+      render '/api/users/show'
     else
       render json: ["Please sign in"], status: 404
     end

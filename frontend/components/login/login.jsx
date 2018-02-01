@@ -1,16 +1,17 @@
 import React from 'react';
 
-class Signup extends React.Component {
+class Login extends React.Component {
 
   constructor(props){
     super(props);
     this.state = { username: '', password: '' };
+    this.demoLogin = this.demoLogin.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.createNewUser(this.state)
+    this.props.login(this.state)
       .then(() => this.props.history.push('/'));
   }
 
@@ -20,14 +21,24 @@ class Signup extends React.Component {
     };
   }
 
+  demoLogin(e){
+    const demo = {
+      username: 'username',
+      password: 'password'
+    };
+    e.preventDefault(e);
+    this.props.login(demo)
+      .then(() => this.props.history.push('/'));
+  }
+
   render() {
     return(
-      <div className='session-form'>
+      <div className='login-form'>
         <form>
           <label>Username:
             <input
               type='text'
-              placeholder='Pick a Username'
+              placeholder='Username'
               value={this.state.username}
               onChange={this.updateForm('username')}
               />
@@ -35,16 +46,17 @@ class Signup extends React.Component {
           <label>Password:
             <input
               type='password'
-              placeholder='Create a Password'
+              placeholder='Password'
               value={this.state.password}
               onChange={this.updateForm('password')}
               />
           </label>
-          <button onClick={this.handleSubmit}>Sign Up</button>
+          <button onClick={this.handleSubmit}>Log In</button>
+          <button onClick={this.demoLogin}>Demo Login</button>
         </form>
       </div>
     );
   }
 }
 
-export default Signup;
+export default Login;

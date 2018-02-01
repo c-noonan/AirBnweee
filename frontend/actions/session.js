@@ -14,22 +14,21 @@ export const logoutCurrentUser = () => ({
 });
 
 export const createNewUser = formUser => dispatch => {
-  return APIUtil.postUser(formUser).then(serverUser =>
-    dispatch(receiveCurrentUser(serverUser))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
+  return APIUtil.postUser(formUser).then(
+    serverUser => dispatch(receiveCurrentUser(serverUser)),
+    err => (dispatch(receiveErrors(err.responseJSON)))
   );
 };
 
-export const login = formUser => dispatch => {
-  return APIUtil.postSession(formUser).then(serverUser =>
+export const login = formUser => dispatch => (
+  APIUtil.postSession(formUser).then(serverUser => (
     dispatch(receiveCurrentUser(serverUser))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
-  );
-};
+  ))
+);
 
-export const logout = () => dispatch => {
-  return APIUtil.deleteSession()
-    .then(() => dispatch(logoutCurrentUser()));
-};
+export const logout = () => dispatch => (
+  APIUtil.deleteSession()
+    .then(() => dispatch(logoutCurrentUser()))
+);

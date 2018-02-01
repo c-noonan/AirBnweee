@@ -11,7 +11,7 @@
 
 .navbar-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 33px 5px;
   margin: 0px 5px;
   margin-bottom: -10px;
@@ -31,4 +31,13 @@
 .navbar-links *:hover {
   border-bottom-width: 2px;
   border-bottom-style: solid;
+}
+
+.navbar-links p {
+
+}
+
+.navbar-links p:hover {
+  border-bottom-width: 0px;
+  border-bottom-style: none;
 }
