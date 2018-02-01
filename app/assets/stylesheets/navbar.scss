@@ -33,6 +33,11 @@
   border-bottom-style: solid;
 }
 
+.navbar-links *:hover {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
 .navbar-links p {
 
 }
@@ -40,4 +45,15 @@
 .navbar-links p:hover {
   border-bottom-width: 0px;
   border-bottom-style: none;
+}
+
+#session {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  padding-bottom: 10px;
+  font-family: Helvetica Neue;
+  font-size: 13px;
+  color: #686868;
+  letter-spacing: 0.07em;
 }

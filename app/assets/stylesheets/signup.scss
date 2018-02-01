@@ -1,3 +1,10 @@
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  right: 35%;
+}
+
 .session-form {
   display: flex;
   justify-content: center;
@@ -8,6 +15,7 @@
 .session-form div {
   display: block;
   color: rgb(118, 118, 118);
+  opacity: 0.5;
   width: 40px;
   height: 40px;
   font-size: 50px;
@@ -15,11 +23,11 @@
   padding: 10px 5px;
 }
 
-// .session-form span {
-//   display: flex;
-//   justify-content: center;
-//   color: #686868;
-// }
+.session-form span {
+  display: flex;
+  justify-content: center;
+  color: #686868;
+}
 
 #username {
   display: flex;
@@ -74,4 +82,8 @@
   letter-spacing: 0.07em;
   font-family: Helvetica Neue;
   font-size: 19px;
+}
+
+#errors{
+  color: red;
 }

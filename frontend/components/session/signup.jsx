@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Signup extends React.Component {
 
   constructor(props){
@@ -12,6 +13,7 @@ class Signup extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     this.props.createNewUser(this.state)
+      .then(() => this.props.onClose())
       .then(() => this.props.history.push('/'));
   }
 
@@ -28,7 +30,19 @@ class Signup extends React.Component {
     };
     e.preventDefault(e);
     this.props.login(demo)
-      .then(() => this.props.history.push('/'));
+      .then(() => this.props.onClose());
+    }
+
+  renderErrors(){
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
@@ -36,6 +50,7 @@ class Signup extends React.Component {
       <div className='session-form'>
         <form>
           <div>&times;</div>
+          <div id='errors'>{this.renderErrors}</div>
           <label id='username'>
             <input id='username-input'
               type='text'
@@ -54,6 +69,10 @@ class Signup extends React.Component {
           </label>
           <button id='button' onClick={this.handleSubmit}>Sign Up</button>
           <button id='button' onClick={this.demoLogin}>Demo Login</button>
+          <span>
+            <p>Already have an account?</p>
+            <p>Log In!</p>
+          </span>
         </form>
       </div>
     );

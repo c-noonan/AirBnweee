@@ -11,6 +11,7 @@ class Login extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     this.props.login(this.state)
+      .then(() => this.props.onClose())
       .then(() => this.props.history.push('/'));
   }
 
@@ -20,11 +21,24 @@ class Login extends React.Component {
     };
   }
 
+  renderErrors(){
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
     return(
       <div className='login-form'>
         <form>
           <div>&times;</div>
+          <div id='errors'>{this.renderErrors}</div>
           <label id='username'>
             <input id='username-input'
               type='text'
