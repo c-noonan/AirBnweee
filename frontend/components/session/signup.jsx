@@ -34,10 +34,13 @@ class Signup extends React.Component {
     }
 
   renderErrors(){
+    if (!this.props.errors) {
+      return;
+    }
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li>
+          <li key={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -50,7 +53,7 @@ class Signup extends React.Component {
       <div className='session-form'>
         <form>
           <div>&times;</div>
-          <div id='errors'>{this.renderErrors}</div>
+          <p id='errors'>{this.renderErrors()}</p>
           <label id='username'>
             <input id='username-input'
               type='text'

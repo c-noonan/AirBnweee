@@ -3,6 +3,7 @@
   top: 20%;
   left: 35%;
   right: 35%;
+  border: 1px solid #D3D3D3;
 }
 
 .session-form {
@@ -23,10 +24,15 @@
   padding: 10px 5px;
 }
 
+.session-form p{
+
+}
+
 .session-form span {
   display: flex;
   justify-content: center;
   color: #686868;
+  padding-bottom: 40px;
 }
 
 #username {
@@ -84,6 +90,8 @@
   font-size: 19px;
 }
 
-#errors{
+#errors {
   color: red;
+  padding-top: 15px;
+  padding-left: 7px;
 }

@@ -3,6 +3,7 @@
   top: 20%;
   left: 35%;
   right: 35%;
+  border: 1px solid #D3D3D3;
 }
 
 .login-form {
@@ -27,6 +28,11 @@
   display: flex;
   justify-content: center;
   color: #686868;
+  padding-bottom: 40px;
+}
+
+.login-form p{
+
 }
 
 #username {
@@ -84,6 +90,8 @@
   font-size: 19px;
 }
 
-#errors{
+#errors {
   color: red;
+  padding-top: 15px;
+  padding-left: 7px;
 }
