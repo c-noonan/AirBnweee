@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  owner_id: 1
+  image_url: MyString
+  lat: 1
+  long: 1
+  description: 
+
+two:
+  owner_id: 1
+  image_url: MyString
+  lat: 1
+  long: 1
+  description: 
