@@ -49,7 +49,7 @@ class Login extends React.Component {
               value={this.state.username}
               onChange={this.updateForm('username')}
               />
-            <img src='http://icons.iconarchive.com/icons/iconsmind/outline/512/Email-icon.png' />
+            <img src='https://cdn4.iconfinder.com/data/icons/line-system/512/user-512.png' />
           </label>
           <label id='password'>
             <input id='password-input'
