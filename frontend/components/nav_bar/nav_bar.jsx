@@ -9,7 +9,11 @@ class NavBar extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { modalOpen: false };
+    this.state = {
+      modalOpen: false,
+      formType: null,
+      whichClass: null
+    };
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
   }
@@ -21,13 +25,19 @@ class NavBar extends React.Component {
 
   openModal(bool){
     if (bool === true ) {
-      this.setState({ modalOpen: true });
-      this.whichClass = 'signup';
-      this.formType = <SignupContainer onClose={() => this.closeModal()} />;
+      this.setState({ modalOpen: true,
+        whichClass: 'signup',
+        formType: <SignupContainer
+        onClose={() => this.closeModal()}
+        onSwitch={() => this.openModal(!bool)}
+      />});
     } else {
-      this.setState({ modalOpen: true });
-      this.whichClass = 'login';
-      this.formType = <LoginContainer onClose={() => this.closeModal()}/>;
+      this.setState({ modalOpen: true,
+      whichClass: 'login',
+      formType: <LoginContainer
+        onClose={() => this.closeModal()}
+        onSwitch={() => this.openModal(!bool)}
+        /> });
     }
   }
 
@@ -39,8 +49,8 @@ class NavBar extends React.Component {
           style={style}
           contentLabel="Modal"
           >
-          <div className={this.whichClass}>
-            {this.formType}
+          <div className={this.state.whichClass}>
+            {this.state.formType}
           </div>
         </Modal>;
 

@@ -63,7 +63,7 @@ class Login extends React.Component {
           <button id='button' onClick={this.handleSubmit}>Log In</button>
           <span>
             <p>Don't have an account?</p>
-            <p>Sign Up!</p>
+            <button onClick={this.props.onSwitch}>Sign Up!</button>
           </span>
         </form>
       </div>

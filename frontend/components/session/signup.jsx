@@ -76,7 +76,7 @@ class Signup extends React.Component {
           <button id='button' onClick={this.demoLogin}>Demo Login</button>
           <span>
             <p>Already have an account?</p>
-            <p>Log In!</p>
+            <button onClick={this.props.onSwitch}>Log In!</button>
           </span>
         </form>
       </div>
