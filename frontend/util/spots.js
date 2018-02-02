@@ -1,6 +1,6 @@
-// export const fetchSpots = () => ({
-//   $.ajax({
-//     method: 'GET',
-//     url: '/api/spots'
-//   })
-// })
+export const fetchSpots = () => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/spots'
+  })
+);

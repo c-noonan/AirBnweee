@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import * as APIUtil from './util/session';
 import configureStore from './store/store';
 import Root from './components/root';
+import fetchSpots from './actions/spots';
 
 document.addEventListener("DOMContentLoaded", () => {
   const rootEl = document.getElementById('root');

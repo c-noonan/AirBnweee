@@ -30,14 +30,14 @@ class NavBar extends React.Component {
         formType: <SignupContainer
         onClose={() => this.closeModal()}
         onSwitch={() => this.openModal(!bool)}
-      />});
+      />}, this.props.clearErrors);
     } else {
       this.setState({ modalOpen: true,
       whichClass: 'login',
       formType: <LoginContainer
         onClose={() => this.closeModal()}
         onSwitch={() => this.openModal(!bool)}
-        /> });
+        /> }, this.props.clearErrors);
     }
   }
 
