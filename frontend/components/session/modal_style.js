@@ -13,7 +13,7 @@ const style = {
     left              : '50%',
     transform         : 'translate(-50%, -50%)',
     width             : '520px',
-    height            : '450px'
+    height            : '430px'
   },
 };
 
