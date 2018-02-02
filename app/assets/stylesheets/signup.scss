@@ -1,10 +1,9 @@
-.modal {
-  position: absolute;
-  top: 20%;
-  left: 35%;
-  right: 35%;
-  border: 1px solid #D3D3D3;
-}
+// .modal {
+//   top: 20%;
+//   left: 35%;
+//   right: 35%;
+//   border: 1px solid #D3D3D3;
+// }
 
 .session-form {
   display: flex;
@@ -39,6 +38,13 @@
   padding-left: 10px;
   color: blue;
   text-decoration: underline;
+}
+
+.session-form img {
+  padding-top: 10px;
+  padding-right: 8px;
+  width: 25px;
+  height: 25px;
 }
 
 #username {

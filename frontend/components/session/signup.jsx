@@ -61,6 +61,7 @@ class Signup extends React.Component {
               value={this.state.username}
               onChange={this.updateForm('username')}
               />
+            <img src='http://icons.iconarchive.com/icons/iconsmind/outline/512/Email-icon.png' />
           </label>
           <label id='password'>
             <input id='password-input'
@@ -69,6 +70,7 @@ class Signup extends React.Component {
               value={this.state.password}
               onChange={this.updateForm('password')}
               />
+            <img src='https://image.freepik.com/iconos-gratis/bloquee-esbozado-simbolo-de-candado-para-la-interfaz-de-seguridad_318-71943.jpg' />
           </label>
           <button id='button' onClick={this.handleSubmit}>Sign Up</button>
           <button id='button' onClick={this.demoLogin}>Demo Login</button>

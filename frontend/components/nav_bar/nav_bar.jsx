@@ -33,7 +33,7 @@ class NavBar extends React.Component {
 
   render() {
     const theModal =
-        <Modal className='modal'
+        <Modal
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
           style={style}
@@ -47,7 +47,7 @@ class NavBar extends React.Component {
     const display = this.props.currentUser ? (
       <div className='navbar-links'>
         <p>Hello, { this.props.currentUser.username }</p>
-        <Link to='/' onClick={this.props.logout}>Logout</Link>
+        <Link to='/' onClick={() => {this.props.logout(); this.props.clearErrors();}}>Logout</Link>
       </div>
     ) : (
       <div className='navbar-links'>
