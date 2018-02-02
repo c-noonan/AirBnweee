@@ -1,3 +1,43 @@
 // Place all the styles related to the api/spots controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.list-elements {
+  display: flex;
+  align-content: left;
+  margin: 25px 20px;
+  color: #484848;
+  font-family: Helvetica Neue;
+  font-weight: 300;
+  letter-spacing: 0.07em;
+  border: 1px solid #D3D3D3;
+  border-radius: 4px;
+}
+
+.list-elements img {
+  width: 350px;
+  height: 230px;
+  padding: 0px 8px;
+  background-color: #D3D3D3;
+  border-radius: 4px;
+}
+
+.list-elements img:hover {
+  background-color: gray;
+}
+
+.list-elements span {
+  padding: 25px 15px;
+}
+
+#spot-items {
+  display: flex;
+  justify-content: center;
+  list-style-type: disc;
+}
+
+#title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 25px;
+}
