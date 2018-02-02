@@ -40,7 +40,7 @@ class Login extends React.Component {
     return(
       <div className='login-form'>
         <form>
-          <div>&times;</div>
+          <div><button onClick={this.props.onClose}>&times;</button></div>
           <p id='errors'>{this.renderErrors()}</p>
           <label id='username'>
             <input id='username-input'

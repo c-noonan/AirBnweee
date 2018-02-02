@@ -52,7 +52,7 @@ class Signup extends React.Component {
     return(
       <div className='session-form'>
         <form>
-          <div><button onClick={this.props.on}>&times;</button></div>
+          <div><button onClick={this.props.onClose}>&times;</button></div>
           <p id='errors'>{this.renderErrors()}</p>
           <label id='username'>
             <input id='username-input'
