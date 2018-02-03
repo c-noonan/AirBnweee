@@ -10,29 +10,20 @@ class SpotIndexItem extends React.Component {
     return(
       <div>
         <ul className='list-elements'>
-
           <img src={this.props.spot.image_url} />
-
-          <span className='spot-info'>
+          <span>
               <li id='title'>
                 {this.props.spot.title}
               </li>
               <ul id='spot-items'>
-                  <li>
-                    {this.props.spot.guests}
-                  </li>
-                  <li>
-                    {this.props.spot.bedrooms}
-                  </li>
-                  <li>
-                    {this.props.spot.bathrooms}
-                  </li>
-                  <li>
-                    {this.props.spot.price}
-                  </li>
+                <li>{this.props.spot.guests} guests</li>&bull;
+                <li>{this.props.spot.bedrooms} bedrooms</li>&bull;
+                <li>{this.props.spot.bathrooms} bathrooms</li>
               </ul>
+              <li id='price'>
+                ${this.props.spot.price} per night
+              </li>
           </span>
-
         </ul>
       </div>
     );

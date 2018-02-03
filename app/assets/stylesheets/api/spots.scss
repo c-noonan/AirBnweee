@@ -27,17 +27,22 @@
 }
 
 .list-elements span {
+  width: 100%;
   padding: 25px 15px;
-}
-
-#spot-items {
-  display: flex;
-  justify-content: center;
-  list-style-type: disc;
 }
 
 #title {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 25px;
+}
+
+#spot-items {
+  display: flex;
+  align-items: left;
+  font-size: 19px;
+}
+
+#price {
+  font-size: 19px;
 }

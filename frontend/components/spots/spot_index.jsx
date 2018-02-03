@@ -18,6 +18,9 @@ class SpotIndex extends React.Component {
     ));
     return(
       <div>
+        <span className='header-filter'>
+          Welcome to Airbnb
+        </span>
         {spotItems}
       </div>
     );
