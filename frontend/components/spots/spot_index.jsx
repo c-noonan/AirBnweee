@@ -17,11 +17,12 @@ class SpotIndex extends React.Component {
       <SpotIndexItem key={spot.id} spot={spot} />
     ));
     return(
-      <div>
+      <div className='index-page'>
         <span className='header-filter'>
-
+          <h1>Welcome to Airbnweee</h1>
         </span>
-        {spotItems}
+        <span>{spotItems}</span>
+        <span id='map'>the map</span>
       </div>
     );
   }

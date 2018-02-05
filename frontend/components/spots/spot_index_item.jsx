@@ -10,7 +10,7 @@ class SpotIndexItem extends React.Component {
     return(
       <div>
         <ul className='list-elements'>
-          <img src={this.props.spot.image_url} />
+            <img src={this.props.spot.image_url} />
           <span>
               <li id='header'>
                 ENTIRE PLACE
