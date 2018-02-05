@@ -9,7 +9,7 @@ export default (state = [], action) => {
         return null;
       }
     case CLEAR_ERRORS:
-      return state;
+      return null;
     default:
       return state;
   }
