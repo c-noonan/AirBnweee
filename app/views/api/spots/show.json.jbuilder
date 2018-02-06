@@ -3,16 +3,16 @@ json.spot do
   json.reviews @spot.review_ids
 end
 
-json.reviews do
-  @spot.reviews.each do |review|
-    json.set! review.id do
-      json.extract! review, :body, :rating, :author_id
-    end
-  end
-end
-
-json.reviewers do
-  @spot.reviewers.each do |reviewer|
-    json.extract! reviewer, :username, :image_url
-  end
-end
+# json.reviews do
+#   @spot.reviews.each do |review|
+#     json.set! review.id do
+#       json.extract! review, :body, :rating, :author_id
+#     end
+#   end
+# end
+#
+# json.reviewers do
+#   @spot.reviewers.each do |reviewer|
+#     json.extract! reviewer, :username, :image_url
+#   end
+# end

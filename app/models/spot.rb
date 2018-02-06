@@ -11,6 +11,19 @@ class Spot < ApplicationRecord
     foreign_key: :spot_id,
     class_name: 'Review'
 
+    #when this changes
+    #spot.reviews
+  #
+  #   has_many :bookings
+  #
+  # def reviews
+  #   @reviews = []
+  #   self.bookings.each do |booking|
+  #       @reviews.push(booking.reviews)
+  #   end
+  #   @reviews
+  # end
+
   has_many :reviewers, through: :reviews, source: :author
-  
+
 end
