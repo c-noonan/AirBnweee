@@ -19,9 +19,6 @@ class SpotIndex extends React.Component {
     ));
     return(
       <div className='index-page'>
-        <span className='header-filter'>
-          <h1>Welcome to Airbnweee</h1>
-        </span>
         <span>{spotItems}</span>
         <span id='map'>the map</span>
       </div>
