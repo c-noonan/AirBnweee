@@ -6,4 +6,9 @@ class Spot < ApplicationRecord
     foreign_key: :owner_id,
     class_name: "User"
 
+  has_many :reviews,
+    primary_key: :id,
+    foreign_key: :spot_id,
+    class_name: 'Review'
+
 end

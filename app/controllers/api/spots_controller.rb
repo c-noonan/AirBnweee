@@ -32,7 +32,7 @@ class Api::SpotsController < ApplicationController
     if @spot
       @spot.delete!
     else
-      reder json: ['That spot does not exist'], status: 422
+      render json: ['That spot does not exist'], status: 422
     end
   end
 
