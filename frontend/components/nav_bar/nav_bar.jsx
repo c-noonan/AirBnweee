@@ -72,7 +72,7 @@ class NavBar extends React.Component {
       <div className='navbar'>
         <span>
           <Link to='/'>
-            <img id='logo' src='https://d3ui957tjb5bqd.cloudfront.net/uploads/2015/09/airbnb-2.jpg'/>
+            <img id='logo' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOchZVtVc4mzEfOS7jg43BPZQVeGc7Ea6rqaP8bSdwKg_oDS60'/>
           </Link>
         </span>
         {display}
