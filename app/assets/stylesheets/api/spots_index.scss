@@ -55,15 +55,15 @@
   padding-bottom: 12px;
 }
 
-.index-page {
+.spots-index-with-map {
   display: flex;
-
+  justify-content: space-between;
 }
 
-#map {
-  width: 500px;
-  height: 500px;
-  background-color: blue;
-  margin: 25px 20px;
-  align-items: right;
+#map-container {
+  align-items: left;
+  margin: 20px 20px;
+  width: 50%;
+  min-height: 500px;
+  max-height: 800px;
 }

@@ -4,9 +4,9 @@ import SpotIndex from '../spots/spot_index';
 
 const SpotSearch = ({ spots, fetchSpots }) => {
   return (
-    <div>
-      <SpotMap />
+    <div className='spots-index-with-map'>
       <SpotIndex spots={spots} fetchSpots={fetchSpots}/>
+      <SpotMap />
     </div>
   );
 };

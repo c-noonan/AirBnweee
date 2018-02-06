@@ -19,7 +19,6 @@ class SpotIndex extends React.Component {
     return(
       <div className='index-page'>
         <span>{spotItems}</span>
-        <span id='map'>the map</span>
       </div>
     );
   }
