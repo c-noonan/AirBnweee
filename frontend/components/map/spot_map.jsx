@@ -1,4 +1,5 @@
 import React from 'react';
+import MarkerManager from '../../util/marker_manager';
 
 class SpotMap extends React.Component {
 
@@ -12,6 +13,12 @@ class SpotMap extends React.Component {
       zoom: 10
     };
     this.map = new google.maps.Map(this.mapNode, mapOptions);
+    this.MarkerManager = new MarkerManager(this.map);
+    this.MarkerManager.updateMarkers(this.props.spots);
+  }
+
+  componentDidUpdate(){
+    this.MarkerManager.updateMarkers(this.props.spots);
   }
 
   render(){

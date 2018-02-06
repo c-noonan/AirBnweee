@@ -6,7 +6,7 @@ const SpotSearch = ({ spots, fetchSpots }) => {
   return (
     <div className='spots-index-with-map'>
       <SpotIndex spots={spots} fetchSpots={fetchSpots}/>
-      <SpotMap />
+      <SpotMap spots={spots}/>
     </div>
   );
 };
