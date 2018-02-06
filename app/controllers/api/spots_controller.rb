@@ -20,7 +20,13 @@ class Api::SpotsController < ApplicationController
   # end
 
   def show
-    @spot = Spot.find_by(id: params[:id])
+    @spot = Spot.find(params[:id])
+
+    if @spot
+      render :show
+    else
+      render json: ['This spot does not exist'], status: 404
+    end
   end
 
   def index
@@ -28,7 +34,7 @@ class Api::SpotsController < ApplicationController
   end
 
   def destroy
-    @spot = Spot.find_by(id: params[:id])
+    @spot = Spot.find(params[:id])
     if @spot
       @spot.delete!
     else

@@ -1,12 +1,12 @@
 import * as APIUtil from '../util/reviews';
 import { receiveErrors } from './errors';
 
-export const RECEIVE_REVEIWS = "RECEIVE_REVEIWS";
+export const RECEIVE_ALL_REVEIWS = "RECEIVE_REVEIWS";
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const REMOVE_REVIEW = "REMOVE_REVIEW";
 
-export const receiveReviews = (reviews) => ({
-  type: RECEIVE_REVEIWS,
+export const receiveAllReviews = (reviews) => ({
+  type: RECEIVE_ALL_REVEIWS,
   reviews
 });
 
@@ -22,7 +22,7 @@ export const removeReview = (review) => ({
 
 export const requestReviews = () => dispatch => {
   return APIUtil.fetchReviews().then(
-    serverReviews => dispatch(receiveReviews(serverReviews)),
+    serverReviews => dispatch(receiveAllReviews(serverReviews)),
     err => (dispatch(receiveErrors(err.responseJSON)))
   );
 };

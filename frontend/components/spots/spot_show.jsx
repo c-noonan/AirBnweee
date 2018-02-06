@@ -11,6 +11,8 @@ class SpotShow extends React.Component {
   }
 
   render () {
+    if (!this.props.spot) return <h1>Loading...</h1>;
+
     return (
       <div>
         <img src={this.props.spot.image_url} />
@@ -19,7 +21,6 @@ class SpotShow extends React.Component {
         {this.props.spot.guests}
         {this.props.spot.bedrooms}
         {this.props.spot.bathrooms}
-        ${this.props.spot.price}
       </div>
     );
   }

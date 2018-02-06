@@ -11,4 +11,6 @@ class Spot < ApplicationRecord
     foreign_key: :spot_id,
     class_name: 'Review'
 
+  has_many :reviewers, through: :reviews, source: :author
+  
 end

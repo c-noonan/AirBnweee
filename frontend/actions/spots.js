@@ -9,9 +9,11 @@ export const receiveAllSpots = (spots) => ({
   spots
 });
 
-export const receiveSpot = (spot) => ({
+export const receiveSpot = (payload) => ({
   type: RECEIVE_SPOT,
-  spot
+  spot: payload.spot,
+  reviewers: payload.reviewers,
+  reviews: payload.reviews
 });
 
 export const fetchSpots = () => dispatch => {
