@@ -1,11 +1,10 @@
 import { connect } from "react-redux";
-import SpotIndex from './spot_index';
+import SpotSearch from './spot_search';
 import { fetchSpots } from '../../actions/spots';
 
-const mapStateToProps = (state, ownProps) => {
-  console.log(state);
-  return { spots: Object.values(state.entities.spots) };
-};
+const mapStateToProps = (state, ownProps) => ({
+  spots: Object.values(state.entities.spots)
+});
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchSpots: () => dispatch(fetchSpots())
@@ -14,4 +13,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SpotIndex);
+)(SpotSearch);

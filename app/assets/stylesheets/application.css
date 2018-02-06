@@ -63,3 +63,8 @@
    display: block;
    clear: both;
  }
+
+ #map-container {
+   width: 500px;
+   height: 500px;
+ }

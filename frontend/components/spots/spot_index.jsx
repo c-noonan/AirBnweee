@@ -1,5 +1,6 @@
 import React from 'react';
 import SpotIndexItem from './spot_index_item';
+import SpotSearch from '../search/search_container';
 
 class SpotIndex extends React.Component {
 
