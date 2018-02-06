@@ -39,7 +39,7 @@ class Login extends React.Component {
   render() {
     return(
       <div className='login-form'>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div><button onClick={this.props.onClose}>&times;</button></div>
           <p id='errors'>{this.renderErrors()}</p>
           <label id='username'>
@@ -60,7 +60,7 @@ class Login extends React.Component {
               />
             <img src='https://image.freepik.com/iconos-gratis/bloquee-esbozado-simbolo-de-candado-para-la-interfaz-de-seguridad_318-71943.jpg' />
           </label>
-          <button id='button' onClick={this.handleSubmit}>Log In</button>
+          <button className='button' type='submit'>Log In</button>
           <span>
             <p>Don't have an account?</p>
             <button onClick={this.props.onSwitch}>Sign Up!</button>

@@ -51,7 +51,7 @@ class Signup extends React.Component {
   render() {
     return(
       <div className='session-form'>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div><button onClick={this.props.onClose}>&times;</button></div>
           <p id='errors'>{this.renderErrors()}</p>
           <label id='username'>
@@ -72,8 +72,8 @@ class Signup extends React.Component {
               />
             <img src='https://image.freepik.com/iconos-gratis/bloquee-esbozado-simbolo-de-candado-para-la-interfaz-de-seguridad_318-71943.jpg' />
           </label>
-          <button id='button' onClick={this.handleSubmit}>Sign Up</button>
-          <button id='button' onClick={this.demoLogin}>Demo Login</button>
+          <button className='button' type='submit'>Sign Up</button>
+          <button className='button' onClick={this.demoLogin}>Demo Login</button>
           <span>
             <p>Already have an account?</p>
             <button onClick={this.props.onSwitch}>Log In!</button>
