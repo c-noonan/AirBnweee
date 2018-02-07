@@ -23,10 +23,10 @@ class SpotShow extends React.Component {
       <div className='spots-show-info'>
         <img id='house-image' src={this.props.spot.image_url} />
         <ul className='spots-show-list'>
-          <li id='header'>
-            ENTIRE PLACE
-          </li>
           <li id='show-page-title'>{this.props.spot.title}</li>
+          <li id='header'>
+            Entire Place
+          </li>
           <li>
             <ul>
               <img src='https://image.freepik.com/free-icon/multiple-users-silhouette_318-49546.jpg' />
