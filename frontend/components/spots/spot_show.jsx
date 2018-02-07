@@ -20,7 +20,7 @@ class SpotShow extends React.Component {
     if (!this.props.spot) return <h1>Loading...</h1>;
       console.log(this.props.spot);
     return (
-      <div>
+      <div className='spots-show-info'>
         <img id='house-image' src={this.props.spot.image_url} />
         <ul className='spots-show-list'>
           <li id='header'>

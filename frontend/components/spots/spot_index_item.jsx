@@ -31,30 +31,30 @@ class SpotIndexItem extends React.Component {
           contentLabel="Modal"
           >
           <div>
-            <Link to={`/spots/${this.props.spot.id}`}>
-            <div className='spots-show-info'>
+            <div className='modal-spots-show-info'>
               <div><button id='close-on-show-modal' onClick={this.closeModal}>&times;</button></div>
-              <img id='house-image' src={this.props.spot.image_url} />
-              <ul className='spots-show-list'>
-                <li id='header'>
+              <Link to={`/spots/${this.props.spot.id}`}>
+              <img id='modal-house-image' src={this.props.spot.image_url} />
+              <ul className='modal-spots-show-list'>
+                <li id='modal-header'>
                   ENTIRE PLACE
                 </li>
-                <li id='show-page-title'>{this.props.spot.title}</li>
+                <li id='modal-show-page-title'>{this.props.spot.title}</li>
                 <li>
                   <ul>
                     <img src='https://image.freepik.com/free-icon/multiple-users-silhouette_318-49546.jpg' />
-                    <li id='show-page-guests'>{this.props.spot.guests} guests &nbsp;&nbsp;</li>
+                    <li id='modal-show-page-guests'>{this.props.spot.guests} guests &nbsp;&nbsp;</li>
                     <img src='http://freevector.co/wp-content/uploads/2014/03/59805-opened-door-aperture.png' />
-                    <li id='show-page-bedrooms'>{this.props.spot.bedrooms} bedrooms &nbsp;&nbsp;</li>
+                    <li id='modal-show-page-bedrooms'>{this.props.spot.bedrooms} bedrooms &nbsp;&nbsp;</li>
                     <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn4MdemNF_P6d4Lcw7byOhV0TLdVJHfuqepdS4-MQY3e60uhLU' />
-                    <li id='show-page-bathrooms'>{this.props.spot.bathrooms} bathrooms</li>
+                    <li id='modal-show-page-bathrooms'>{this.props.spot.bathrooms} bathrooms</li>
                   </ul>
                 </li>
-                <li id='show-page-description'>{this.props.spot.description}</li>
+                <li id='modal-show-page-description'>{this.props.spot.description}</li>
               </ul>
-              <button id='modal-show-page' onClick={this.handleSubmit}>View More Details</button>
-            </div>
+              <p id='modal-show-page'>View More Details</p>
             </Link>
+            </div>
           </div>
         </Modal>;
 
