@@ -13,8 +13,12 @@
   letter-spacing: 0.07em;
   border: 1px solid #DCDCDC;
   border-radius: 4px;
-  width: 95%;
+  width: 100%;
   min-width: 600px;
+}
+
+.index-page {
+  width: 60%;
 }
 
 #image-holder {
@@ -68,9 +72,9 @@
 }
 
 #map-container {
-  align-items: right;
+  display: block;
+  float: right;
   margin-right: 25px;
-  width: 60%;
-  min-height: 500px;
-  max-height: 800px;
+  width: 35%;
+  height: 700px;
 }
