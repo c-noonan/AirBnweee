@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router';
 
 class SpotShow extends React.Component {
 
@@ -10,11 +9,11 @@ class SpotShow extends React.Component {
   componentDidMount() {
     this.props.fetchSpot(this.props.match.params.spotId);
   }
-  //
-  // componentWillReceiveProps(newProps){
-  //   if (this.props.match.params.spotId !== newProps.match.params.spotId)
-  //     this.props.fetchSpot(newProps.match.params.spotId);
-  // }
+
+  componentWillReceiveProps(newProps){
+    if (this.props.match.params.spotId !== newProps.match.params.spotId)
+      this.props.fetchSpot(newProps.match.params.spotId);
+  }
 
   render () {
     if (!this.props.spot) return <h1>Loading...</h1>;
@@ -37,7 +36,9 @@ class SpotShow extends React.Component {
               <li id='show-page-bathrooms'>{this.props.spot.bathrooms} bathrooms</li>
             </ul>
           </li>
+          <li><img id='user-photo' src={this.props.spot.owner_image_url}/></li>
           <li id='show-page-description'>{this.props.spot.description}</li>
+          <li id='user-username'>Hosted by {this.props.spot.owner_username}</li>
         </ul>
       </div>
     );

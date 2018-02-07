@@ -1,6 +1,9 @@
 json.spot do
   json.extract! @spot, :id, :description, :image_url, :price, :guests, :bedrooms, :bathrooms, :title
   json.reviews @spot.review_ids
+  json.owner_id @spot.owner.id
+  json.owner_username @spot.owner.username
+  json.owner_image_url @spot.owner.image_url
 end
 
 json.reviews do
@@ -13,11 +16,3 @@ json.reviews do
     end
   end
 end
-#
-# json.reviewers do
-#   @spot.reviewers.each do |reviewer|
-#     json.set! reviewer.id do
-#       json.extract! reviewer, :id, :username, :image_url
-#     end
-#   end
-# end

@@ -5,7 +5,7 @@ class Api::SpotsController < ApplicationController
 
   def create
     @spot = Spot.new(spot_params)
-    @spot.image_url ||= ''
+    @spot.image_url ||= 'https://images.unsplash.com/photo-1491955478222-69ae25414368?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3dd10679b1804958a7e07a09172d2fc0&auto=format&fit=crop&w=750&q=80'
     if @spot.save
       render '/api/spots/show'
     else

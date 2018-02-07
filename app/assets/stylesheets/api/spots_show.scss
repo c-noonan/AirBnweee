@@ -52,8 +52,25 @@
   padding: 3px 5px;
 }
 
+#user-photo {
+  object-fit: cover;
+  float: right;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+#user-username {
+  float: right;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 #show-page-description {
   font-size: 17px;
   font-weight: 200;
-  padding: 20px 0px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
