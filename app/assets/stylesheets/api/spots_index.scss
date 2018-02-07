@@ -13,11 +13,15 @@
   letter-spacing: 0.07em;
   border: 1px solid #D3D3D3;
   border-radius: 4px;
+  width: 95%;
+  min-width: 600px;
 }
 
 .list-elements img {
-  width: 350px;
-  height: 230px;
+  width: 30%;
+  object-fit: scale-down;
+  min-height: 50px;
+  max-height: 200px;
   padding: 0px 10px;
   background-color: #D3D3D3;
   border-radius: 4px;
@@ -62,9 +66,9 @@
 }
 
 #map-container {
-  align-items: left;
+  align-items: right;
   margin-right: 25px;
-  width: 50%;
+  width: 60%;
   min-height: 500px;
   max-height: 800px;
 }
