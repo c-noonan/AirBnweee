@@ -4,7 +4,7 @@ import reviewsReducer from './reviews';
 
 const entitiesReducer = combineReducers({
   spots: spotsReducer,
-  reviews: reviewsReducer
+  reviews: reviewsReducer,
 });
 
 export default entitiesReducer;

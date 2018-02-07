@@ -5,30 +5,22 @@ class SpotShow extends React.Component {
 
   constructor(props) {
     super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.fetchSpot(this.props.match.params.spotId);
   }
   //
-  // componentDidMount() {
-  //   this.props.fetchSpot();
-  // }
-
   // componentWillReceiveProps(newProps){
   //   if (this.props.match.params.spotId !== newProps.match.params.spotId)
   //     this.props.fetchSpot(newProps.match.params.spotId);
   // }
 
-  handleSubmit(e){
-    e.preventDefault();
-    this.props.onClose();
-    this.props.history.push(`/spots`);
-  }
-
   render () {
     if (!this.props.spot) return <h1>Loading...</h1>;
-
+      console.log(this.props.spot);
     return (
-      <div className='spots-show-info'>
-        <div><button id='close-on-show-modal' onClick={this.props.onClose}>&times;</button></div>
+      <div>
         <img id='house-image' src={this.props.spot.image_url} />
         <ul className='spots-show-list'>
           <li id='header'>
@@ -47,7 +39,6 @@ class SpotShow extends React.Component {
           </li>
           <li id='show-page-description'>{this.props.spot.description}</li>
         </ul>
-        <button id='modal-show-page' onClick={this.handleSubmit}>Go to Spot's Page</button>
       </div>
     );
   }

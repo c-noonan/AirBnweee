@@ -1,14 +1,13 @@
 import { connect } from "react-redux";
 import SpotSearch from './spot_search';
-import { fetchSpots, fetchSpot } from '../../actions/spots';
+import { fetchSpots } from '../../actions/spots';
 
 const mapStateToProps = (state, ownProps) => ({
   spots: Object.values(state.entities.spots)
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  fetchSpots: () => dispatch(fetchSpots()),
-  fetchSpot: (id) => dispatch(fetchSpot(id))
+  fetchSpots: () => dispatch(fetchSpots())
 });
 
 export default connect(
