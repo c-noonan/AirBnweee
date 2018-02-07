@@ -12,9 +12,8 @@ class SpotIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const spotItems = this.props.spots.map((spot) => (
-      <SpotIndexItem key={spot.id} spot={spot} />
+      <SpotIndexItem key={spot.id} spot={spot} fetchSpot={this.props.fetchSpot}/>
     ));
     return(
       <div className='index-page'>

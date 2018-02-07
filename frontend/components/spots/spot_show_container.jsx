@@ -3,7 +3,8 @@ import SpotShow from './spot_show';
 import { fetchSpot } from '../../actions/spots';
 
 const mapStateToProps = (state, ownProps) => {
-  return {spot: state.entities.spots[ownProps.match.params.spotId]};
+  console.log(state);
+  return {spot: ownProps.spot};
 };
 
 const mapDispatchToProps = dispatch => ({

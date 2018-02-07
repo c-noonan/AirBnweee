@@ -1,19 +1,26 @@
 import React from 'react';
+// import { Link } from 'react-router';
 
 class SpotShow extends React.Component {
 
   constructor(props) {
     super(props);
-    // this.state = this.props.post;
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+  //
+  // componentDidMount() {
+  //   this.props.fetchSpot();
+  // }
 
-  componentDidMount() {
-    this.props.fetchSpot(this.props.match.params.spotId);
-  }
+  // componentWillReceiveProps(newProps){
+  //   if (this.props.match.params.spotId !== newProps.match.params.spotId)
+  //     this.props.fetchSpot(newProps.match.params.spotId);
+  // }
 
-  componentWillReceiveProps(newProps){
-    if (this.props.match.params.spotId !== newProps.match.params.spotId)
-      this.props.fetchSpot(newProps.match.params.spotId);
+  handleSubmit(e){
+    e.preventDefault();
+    this.props.onClose();
+    this.props.history.push(`/spots`);
   }
 
   render () {
@@ -21,6 +28,7 @@ class SpotShow extends React.Component {
 
     return (
       <div className='spots-show-info'>
+        <div><button id='close-on-show-modal' onClick={this.props.onClose}>&times;</button></div>
         <img id='house-image' src={this.props.spot.image_url} />
         <ul className='spots-show-list'>
           <li id='header'>
@@ -39,6 +47,7 @@ class SpotShow extends React.Component {
           </li>
           <li id='show-page-description'>{this.props.spot.description}</li>
         </ul>
+        <button id='modal-show-page' onClick={this.handleSubmit}>Go to Spot's Page</button>
       </div>
     );
   }
