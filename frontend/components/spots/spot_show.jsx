@@ -1,4 +1,5 @@
 import React from 'react';
+import ReviewContainer from '../reviews/review_container';
 
 class SpotShow extends React.Component {
 
@@ -17,7 +18,6 @@ class SpotShow extends React.Component {
 
   render () {
     if (!this.props.spot) return <h1>Loading...</h1>;
-      console.log(this.props.spot);
     return (
       <div className='spots-show-info'>
         <img id='house-image' src={this.props.spot.image_url} />
@@ -40,6 +40,7 @@ class SpotShow extends React.Component {
           <li id='show-page-description'>{this.props.spot.description}</li>
           <li id='user-username'>Hosted by {this.props.spot.owner_username}</li>
         </ul>
+        <ReviewContainer />
       </div>
     );
   }

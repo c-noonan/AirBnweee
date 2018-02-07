@@ -55,10 +55,10 @@
 
 #user-photo {
   object-fit: cover;
+  border-radius: 50%;
   float: right;
   width: 100px;
   height: 100px;
-  border-radius: 50%;
   padding-top: 20px;
   padding-left: 20px;
 }

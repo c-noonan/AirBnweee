@@ -9,7 +9,7 @@ end
 json.reviews do
   @spot.reviews.each do |review|
     json.set! review.id do
-      json.extract! review, :body, :rating, :author_id
+      json.extract! review, :id, :body, :rating, :author_id
       json.reviewer_id review.author.id
       json.reviewer_username review.author.username
       json.reviewer_image_url review.author.image_url

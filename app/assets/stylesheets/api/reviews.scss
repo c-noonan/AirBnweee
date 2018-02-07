@@ -1,3 +1,38 @@
 // Place all the styles related to the api/reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.review-box {
+  display: flex;
+  justify-content: space-between;
+  font-family: Helvetica Neue;
+  font-size: 17px;
+  color: #686868;
+  letter-spacing: 0.07em;
+  background-color: white;
+  border-top: 1px solid #D3D3D3;
+  padding: 30px 30px;
+  margin: 35px 30px;
+}
+
+.review-index{
+  padding: 20px 30px;
+  width: 100%;
+  min-height: 100px;
+}
+
+#review-author-image {
+  float: left;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.review-form {
+  border: 1px solid #D3D3D3;
+}
+
+#create-review-button {
+  border: 1px solid #D3D3D3;
+}

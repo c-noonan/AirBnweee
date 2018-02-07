@@ -4,7 +4,9 @@ import { fetchSpot } from '../../actions/spots';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
-  return { spot: state.entities.spots[ownProps.match.params.spotId] };
+  return {
+    spot: state.entities.spots[ownProps.match.params.spotId],
+  };
 };
 
 const mapDispatchToProps = dispatch => ({
