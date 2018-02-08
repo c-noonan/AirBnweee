@@ -34,7 +34,7 @@ class Api::ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     if @review
-      @review.delete!
+      @review.destroy!
     else
       render json: ['That review does not exist'], status: 422
     end

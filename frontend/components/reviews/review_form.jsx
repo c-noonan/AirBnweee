@@ -27,19 +27,12 @@ class ReviewForm extends React.Component {
 
   updateForm(field){
     return(e) => (
-      this.setState({ [field]: e.target.value })
+      this.setState({ [field]: e.target.value }),
+      this.props.clearErrors()
     );
   }
 
-  // isCurrentUser(){
-  //   let action;
-  //   if (window.currentUser && window.currentUser.id === this.props.reviews.author_id) {
-  //     return null;
-  //   }
-  // }
-
   renderErrors(){
-    console.log(this.props);
     if (!this.props.errors) {
       return;
     }
