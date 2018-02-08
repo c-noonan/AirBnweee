@@ -11,10 +11,13 @@ class Spot < ApplicationRecord
     foreign_key: :spot_id,
     class_name: 'Review'
 
-    #when this changes
-    #spot.reviews
+  has_many :bookings,
+    primary_key: :id,
+    foreign_key: :spot_id,
+    class_name: 'Booking'
+
+  #spot.reviews
   #
-  #   has_many :bookings
   #
   # def reviews
   #   @reviews = []
@@ -25,5 +28,6 @@ class Spot < ApplicationRecord
   # end
 
   has_many :reviewers, through: :reviews, source: :author
+  has_many :bookers, through: :bookings, source: :user
 
 end
