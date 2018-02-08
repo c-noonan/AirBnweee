@@ -65,9 +65,12 @@
 }
 
 #map-container {
-  display: block;
-  float: right;
   margin-right: 25px;
   width: 35%;
   height: 700px;
+}
+
+.sticky {
+  position: sticky !important;
+  top: 20px;
 }

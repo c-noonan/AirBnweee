@@ -11,5 +11,6 @@ export default () => (
     <Route exact path='/' component={SearchBarContainer} />
     <Route exact path='/spots/:spotId' component={SpotShowContainer} />
     <Route exact path='/spots' component={MapSearchContainer} />
+    <Route exact path='/spots/?search=:query' component={MapSearchContainer} />
   </div>
 );

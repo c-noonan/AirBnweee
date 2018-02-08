@@ -16,8 +16,8 @@ export const receiveSpot = (payload) => ({
   reviews: payload.reviews
 });
 
-export const fetchSpots = () => dispatch => {
-  return APIUtil.fetchSpots().then(
+export const fetchSpots = (search) => dispatch => {
+  return APIUtil.fetchSpots(search).then(
     serverSpots => dispatch(receiveAllSpots(serverSpots)),
     err => (dispatch(receiveErrors(err.responseJSON)))
   );

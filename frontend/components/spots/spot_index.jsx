@@ -8,7 +8,12 @@ class SpotIndex extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchSpots();
+    console.log(this.props.location.search);
+    if (this.props.location.search === '') {
+      this.props.fetchSpots();
+    } else {
+      this.props.fetchSpots(this.props.location.search.slice(8));
+    }
   }
 
   render() {

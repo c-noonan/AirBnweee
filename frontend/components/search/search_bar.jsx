@@ -9,6 +9,8 @@ class SearchBar extends React.Component {
 
   render(){
     return (
+      <div className='general-container'>
+      <div className='background'></div>
       <div className='search-bar'>
         <span>Airbnweee</span>
         <p>Book homes around the world near all your favorite themeparks!</p>
@@ -33,6 +35,7 @@ class SearchBar extends React.Component {
             </li>
           </Link>
         </ul>
+      </div>
       </div>
     );
   }

@@ -1,7 +1,8 @@
-export const fetchSpots = () => (
+export const fetchSpots = (search) => (
   $.ajax({
     method: 'GET',
-    url: '/api/spots'
+    url: '/api/spots',
+    data: { search } 
   })
 );
 

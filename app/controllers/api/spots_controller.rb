@@ -29,7 +29,12 @@ class Api::SpotsController < ApplicationController
   end
 
   def index
-    @spots = Spot.all
+    if params[:search]
+      query_string = "%#{params[:search]}%"
+      @spots = Spot.where('title LIKE ? OR description LIKE ?', query_string, query_string)
+    else
+      @spots = Spot.all
+    end
   end
 
   def destroy

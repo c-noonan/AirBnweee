@@ -23,7 +23,7 @@ class SpotMap extends React.Component {
 
   render(){
     return (
-      <div id='map-container' ref={ map => this.mapNode = map }>
+      <div id='map-container' className='sticky' ref={ map => this.mapNode = map }>
       </div>
     );
   }
