@@ -38,11 +38,27 @@ class ReviewForm extends React.Component {
   //   }
   // }
 
+  renderErrors(){
+    console.log(this.props);
+    if (!this.props.errors) {
+      return;
+    }
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
   render(){
     return (
       <div className='review-form'>
         <form onSubmit={(e) => this.handleSubmit(e)}>
+          <p id='errors'>{this.renderErrors()}</p>
           <label>
             <input
               type='textarea'

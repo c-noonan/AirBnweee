@@ -7,6 +7,12 @@ class ReviewIndexItem extends React.Component {
     this.isCurrentUser = this.isCurrentUser.bind(this);
   }
 
+  // componentWillReceiveProps(newProps){
+  //   if (window.currentUser.id) {
+  //     this.setState(newProps);
+  //   }
+  // }
+
   isCurrentUser(){
     if (window.currentUser && window.currentUser.id === this.props.review.author_id) {
       return (
@@ -16,7 +22,6 @@ class ReviewIndexItem extends React.Component {
           </div>
         );
     }
-    return null;
   }
 
   render(){

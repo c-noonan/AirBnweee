@@ -4,7 +4,10 @@ import { createReview, updateReview, deleteReview } from '../../actions/reviews'
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
-  return { reviews: Object.values(state.entities.reviews) };
+  return {
+    reviews: Object.values(state.entities.reviews),
+    errors: state.errors
+  };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
