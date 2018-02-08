@@ -67,19 +67,28 @@
   border: 1px solid #D3D3D3;
   padding: 5px 10px;
   width: 50%;
-  height: 20px;
-  margin-top: 27px;
+  height: 22px;
+  margin-top: 25px;
   border-radius: 5px;
   background-color: white;
+  font-size: 16px;
 }
 
-#nav-bar-search-form-input {
+.nav-bar-search-form-input {
   width: 100%;
   padding-left: 5px;
 }
 
 .nav-bar-search-form img {
-  width: 22px;
-  height: 22px;
+  width: 23px;
+  height: 23px;
   opacity: 0.5;
+}
+
+input.nav-bar-search-form-input::-webkit-input-placeholder {
+  color: #686868;
+  font-weight: 200;
+  letter-spacing: 0.07em;
+  font-family: Helvetica Neue;
+  font-size: 16px;
 }

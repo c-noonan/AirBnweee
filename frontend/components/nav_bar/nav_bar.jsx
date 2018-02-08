@@ -27,7 +27,7 @@ class NavBar extends React.Component {
         <form className='nav-bar-search-form' onSubmit={this.handleSubmit}>
           <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/15028-200.png'/>
           <input
-            id="nav-bar-search-form-input"
+            class="nav-bar-search-form-input"
             type='text'
             placeholder='Discover adventure...'
             value={this.state.search}
