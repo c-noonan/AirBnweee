@@ -27,7 +27,7 @@ class SpotShow extends React.Component {
             Entire Place
           </li>
           <li>
-            <ul>
+            <ul id='upper-half-show-page'>
               <img src='https://image.freepik.com/free-icon/multiple-users-silhouette_318-49546.jpg' />
               <li id='show-page-guests'>{this.props.spot.guests} guests &nbsp;&nbsp;</li>
               <img src='http://freevector.co/wp-content/uploads/2014/03/59805-opened-door-aperture.png' />
@@ -36,9 +36,13 @@ class SpotShow extends React.Component {
               <li id='show-page-bathrooms'>{this.props.spot.bathrooms} bathrooms</li>
             </ul>
           </li>
-          <li><img id='user-photo' src={this.props.spot.owner_image_url}/></li>
-          <li id='show-page-description'>{this.props.spot.description}</li>
-          <li id='user-username'>Hosted by {this.props.spot.owner_username}</li>
+          <ul id='lower-half-show-page'>
+            <li id='show-page-description'>{this.props.spot.description}</li>
+            <span id='host-pic-and-name'>
+              <li><img id='user-photo' src={this.props.spot.owner_image_url}/></li>
+              <li id='user-username'>Hosted By {this.props.spot.owner_username}</li>
+            </span>
+          </ul>
         </ul>
         <ReviewContainer />
       </div>

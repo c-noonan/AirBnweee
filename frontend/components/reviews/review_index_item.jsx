@@ -31,8 +31,8 @@ class ReviewIndexItem extends React.Component {
       <div className='review-index'>
         <ul>
           <li><img id='review-author-image' src={this.props.review.reviewer_image_url}/></li>
-          <li>{this.props.review.body}</li>
-          <li>{this.props.review.reviewer_username}</li>
+          <li id='review-username'>{this.props.review.reviewer_username}</li>
+          <li id='review-body'>{this.props.review.body}</li>
           <li>{this.isCurrentUser()}</li>
         </ul>
       </div>
@@ -41,8 +41,3 @@ class ReviewIndexItem extends React.Component {
 }
 
 export default ReviewIndexItem;
-
-
-// <Link onClick={this.props.deleteReview()}>
-//   <img id='create-icon' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ-79QIODe9fgOSRU4x3ZBPAg6Tp-M1BMSGmikxJcZBDSO1H2A'/>
-// </Link>

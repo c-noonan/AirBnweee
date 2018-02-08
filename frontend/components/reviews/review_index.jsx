@@ -19,6 +19,7 @@ class ReviewIndex extends React.Component {
     ));
     return (
       <div className='review-box'>
+        <span id='reviews-title'>Reviews</span>
         <span>{reviewItems}</span>
         <span><ReviewFormContainer/></span>
       </div>

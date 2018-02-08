@@ -38,12 +38,15 @@
   border-top: 1px solid #D3D3D3;
 }
 
+#upper-half-show-page {
+  padding-bottom: 30px;
+}
+
 .spots-show-list ul {
   display: flex;
   font-size: 17px;
   font-weight: 200;
   padding-right: 10px;
-  padding-bottom: 30px;
   border-bottom: 1px solid #D3D3D3;
 }
 
@@ -51,6 +54,16 @@
   width: 15px;
   height: 15px;
   padding: 3px 5px;
+}
+
+#lower-half-show-page {
+  padding: 20px 0px;
+}
+
+#host-pic-and-name {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
 #user-photo {
