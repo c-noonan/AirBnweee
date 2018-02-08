@@ -24,4 +24,138 @@
   font-weight: 500;
   font-size: 28px;
   color: #484848;
+  padding-top: 200px;
+  padding-bottom: 10px;
+}
+
+.themeparks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.disneyland {
+  width: 200px;
+  height: 150px;
+  position: relative;
+}
+
+.disneyland img {
+  width: 100%;
+}
+
+.disneyland:after {
+  content: 'Disneyland';
+  color: white;
+  font-family: Helvetica Neue;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%; height: 88%;
+  top:0; left:0;
+  background:rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.disneyland:hover:after {
+    opacity: 1;
+}
+
+.universal-studios {
+  width: 200px;
+  height: 150px;
+  position: relative;
+}
+
+.universal-studios img {
+  width: 100%;
+  height: 88%;
+}
+
+.universal-studios:after {
+  content: 'Universal Studios';
+  color: white;
+  font-family: Helvetica Neue;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%; height: 88%;
+  top:0; left:0;
+  background:rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.universal-studios:hover:after {
+  opacity: 1;
+}
+
+.six-flags {
+  width: 200px;
+  height: 150px;
+  position: relative;
+}
+
+.six-flags img {
+  width: 100%;
+  height: 88%
+}
+
+.six-flags:after {
+  content: 'Six Flags';
+  color: white;
+  font-family: Helvetica Neue;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%; height: 88%;
+  top:0; left:0;
+  background:rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.six-flags:hover:after {
+  opacity: 1;
+}
+
+.explore-all {
+  width: 200px;
+  height: 150px;
+  position: relative;
+}
+
+.explore-all img {
+  width: 100%;
+  height: 88%;
+}
+
+.explore-all:after {
+  content: 'Explore All';
+  color: white;
+  font-family: Helvetica Neue;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%; height: 88%;
+  top:0; left:0;
+  background:rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.explore-all:hover:after {
+  opacity: 1;
 }
