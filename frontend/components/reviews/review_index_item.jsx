@@ -17,9 +17,9 @@ class ReviewIndexItem extends React.Component {
   isCurrentUser(){
     if (this.props.currentUser && this.props.currentUser.id === this.props.review.author_id) {
       return (
-          <div>
+          <div id='trash-can-icon'>
             <button onClick={(e) => this.handleSubmit(e)}>
-              <img id='trash-can-icon' src='https://d30y9cdsu7xlg0.cloudfront.net/png/446206-200.png'/>
+              <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/446206-200.png'/>
             </button>
           </div>
         );

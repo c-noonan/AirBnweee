@@ -53,9 +53,9 @@ class ReviewForm extends React.Component {
         <form onSubmit={(e) => this.handleSubmit(e)}>
           <p id='errors'>{this.renderErrors()}</p>
           <label>
-            <input
-              type='textarea'
-              placeholder='Write a Review!'
+            <textarea
+              id='review-form-text-input'
+              placeholder='Leave a Review!'
               value={this.state.body}
               onChange={this.updateForm('body')}
             />

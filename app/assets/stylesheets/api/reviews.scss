@@ -8,55 +8,80 @@
   color: #686868;
   letter-spacing: 0.07em;
   background-color: white;
-  margin: 100px 30px;
-  width: 60%;
+  margin: 100px;
+  width: 50%;
 }
 
 #reviews-title {
-  padding-left: 20px;
-  line-height: 25px;
+  padding-left: 10px;
   font-size: 28px;
   font-weight: 500;
 }
 
 .review-index {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   padding: 10px 0px;
   width: 100%;
   min-height: 100px;
-  border-top: 1px solid #D3D3D3;
+  border-bottom: 1px solid #D3D3D3;
 }
 
 #review-author-image {
+  display: block;
   float: left;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   border-radius: 50%;
   padding: 0px 10px;
+  margin-top: 20px;
+}
+
+#review-username {
+  padding-top: 20px;
 }
 
 #review-body {
   font-weight: 300;
   padding-top: 5px;
-}
-
-.review-form {
-  border-top: 1px solid #D3D3D3;
-}
-
-#create-review-button {
-  border: 1px solid #D3D3D3;
-}
-
-#create-icon {
-  width: 30px;
-  height: 30px;
+  padding-bottom: 5px;
+  padding-left: 80px;
+  max-width: 1000px;
+  min-height: 100%;
+  overflow-wrap: break-word;
 }
 
 #trash-can-icon {
+  padding-left: 10px;
   width: 30px;
   height: 30px;
+}
+
+.review-form {
+  margin: 10px 0px;
+}
+
+#review-form-text-input {
+  margin: 10px 0px;
+  margin-left: 5px;
+  resize: vertical;
+  padding: 8px;
+  width: 500px;
+  height: 50px;
+  border: 1px solid #D3D3D3;
+  min-height: 25px;
+  max-width: 1000px;
+}
+
+#create-review-button {
+  display: flex;
+  background-color: #FD595F;
+  color: white;
+  margin: 0px 5px;
+  padding: 5px 0px;
+  padding-left: 12px;
+  width: 150px;
+  height: 29px;
+  font-size: 19px;
+  border-radius: 4px;
+  letter-spacing: 0.07em;
 }
