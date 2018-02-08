@@ -5,6 +5,22 @@ class SearchBar extends React.Component {
 
   constructor(props){
     super(props);
+    this.state = {
+      search: ''
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+    this.props.fetchSpots(this.state)
+      .then(() => this.props.history.push(`/spots/?search=${this.state.search}`));
+  }
+
+  updateForm(field){
+    return(e) => (
+      this.setState({ [field]: e.target.value })
+    );
   }
 
   render(){
@@ -14,11 +30,19 @@ class SearchBar extends React.Component {
       <div className='search-bar'>
         <span>Airbnweee</span>
         <p>Book homes around the world near all your favorite themeparks!</p>
-        <Link to='/spots'>
-          <p id='explore'>
-            Explore Airbnweee
-          </p>
-        </Link>
+        <form className='search-form' onSubmit={this.handleSubmit}>
+          <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/15028-200.png'/>
+          <input
+            id="search-form-input"
+            type='text'
+            placeholder='Discover adventure...'
+            value={this.state.search}
+            onChange={this.updateForm("search")}
+            />
+        </form>
+        <p id='explore'>
+          Explore Airbnweee
+        </p>
         <ul className='themeparks'>
           <li className='disneyland'>
             <img src='https://images.unsplash.com/photo-1484923720570-4bc210954735?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=039cf9c30be0686b5287cd43e45de854&auto=format&fit=crop&w=750&q=80'/>
