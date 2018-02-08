@@ -24,9 +24,9 @@ class SpotIndex extends React.Component {
     if (this.props.spots.length === 0) {
       return (
         <div className="search-errors">
-          <p>Sorry, no items under that search exist!</p>
+          <p id='first-error'>Sorry, no items under that search exist!</p>
           <Link to='/'>
-            <p>Click here to go back to search</p>
+            <p id='second-error'>Back to search</p>
           </Link>
         </div>
       );

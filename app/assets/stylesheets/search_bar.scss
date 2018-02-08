@@ -55,9 +55,26 @@
 }
 
 .search-form img {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   opacity: 0.5;
+}
+
+.search-errors {
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+#first-error {
+  font-family: Helvetica Neue;
+  font-size: 25px;
+  color: #FF5A5F;
+  margin-bottom: 15px;
+}
+
+#second-error {
+  font-family: Helvetica Neue;
+  text-decoration: underline;
 }
 
 #explore {
