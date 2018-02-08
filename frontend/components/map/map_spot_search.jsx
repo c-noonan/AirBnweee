@@ -4,9 +4,11 @@ import SpotIndex from '../spots/spot_index';
 
 const MapSpotSearch = (props) => {
   return (
-    <div className='spots-index-with-map'>
-      <SpotIndex {...props} />
-      <SpotMap {...props}/>
+    <div>
+      <div className='spots-index-with-map'>
+        <SpotIndex {...props} />
+        <SpotMap {...props}/>
+      </div>
     </div>
   );
 };

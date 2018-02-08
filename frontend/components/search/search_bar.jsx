@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.fetchSpots(this.state)
+    this.props.fetchSpots(this.state.search)
       .then(() => this.props.history.push(`/spots/?search=${this.state.search}`));
   }
 

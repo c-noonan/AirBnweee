@@ -12,10 +12,41 @@ class NavBar extends React.Component {
     this.state = {
       modalOpen: false,
       formType: null,
-      whichClass: null
+      whichClass: null,
+      search: ''
     };
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  correctPath(){
+    let searchForm;
+    if (this.props.location.pathname !== '/') {
+      return (searchForm =
+        <form className='nav-bar-search-form' onSubmit={this.handleSubmit}>
+          <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/15028-200.png'/>
+          <input
+            id="nav-bar-search-form-input"
+            type='text'
+            placeholder='Discover adventure...'
+            value={this.state.search}
+            onChange={this.updateForm("search")}
+            />
+        </form>);
+    }
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+    this.props.fetchSpots(this.state.search)
+      .then(() => this.props.history.push(`/spots/?search=${this.state.search}`));
+  }
+
+  updateForm(field){
+    return(e) => (
+      this.setState({ [field]: e.target.value })
+    );
   }
 
   closeModal(){
@@ -75,6 +106,7 @@ class NavBar extends React.Component {
             <img id='logo' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOchZVtVc4mzEfOS7jg43BPZQVeGc7Ea6rqaP8bSdwKg_oDS60'/>
           </Link>
         </span>
+        {this.correctPath()}
         {display}
         {theModal}
       </div>
