@@ -9,15 +9,9 @@ class ReviewForm extends React.Component {
     };
   }
 
-  // componentDidMount(){
-  //   if (this.props.review.id) {
-  //     this.props.fetchReview();
-  //   }
-  // }
-  //
-  // componentWillReceiveProps(newProps){
-  //   this.setState(newProps.review);
-  // }
+  componentWillReceiveProps(newProps){
+    this.setState(newProps.review);
+  }
 
   handleSubmit(e){
     e.preventDefault();
@@ -37,8 +31,15 @@ class ReviewForm extends React.Component {
     );
   }
 
+  // isCurrentUser(){
+  //   let action;
+  //   if (window.currentUser && window.currentUser.id === this.props.reviews.author_id) {
+  //     return null;
+  //   }
+  // }
+
+
   render(){
-    console.log(this.props);
     return (
       <div className='review-form'>
         <form onSubmit={(e) => this.handleSubmit(e)}>

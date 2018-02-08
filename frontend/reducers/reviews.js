@@ -12,7 +12,7 @@ export default (oldState = {}, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_SPOT:
-      return _.merge({}, oldState, action.reviews);
+      return _.merge({}, action.reviews);
     case RECEIVE_REVIEW:
       return _.merge({}, oldState, {[action.review.id]: action.review});
     case REMOVE_REVIEW:

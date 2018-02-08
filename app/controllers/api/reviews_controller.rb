@@ -4,12 +4,16 @@ class Api::ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
-    @review.author_id = current_user.id
-    if @review.save
-      render '/api/reviews/show'
+    if current_user
+      @review = Review.new(review_params)
+      @review.author_id = current_user.id
+      if @review.save
+        render '/api/reviews/show'
+      else
+        render json: @review.errors.full_messages, status: 422
+      end
     else
-      render json: @review.errors.full_messages, status: 422
+      render json: ['Please log in!'], status: 403
     end
   end
 
