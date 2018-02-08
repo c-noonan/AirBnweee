@@ -4,12 +4,14 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import SpotShowContainer from './spots/spot_show_container';
 import MapSearchContainer from './map/map_search_container';
 import SearchBarContainer from './search/search_bar_container';
+import BookingFormContainer from './bookings/booking_form_container';
 
 export default () => (
   <div>
     <Route path='/' component={NavBarContainer} />
     <Route exact path='/' component={SearchBarContainer} />
     <Route exact path='/spots/:spotId' component={SpotShowContainer} />
+    <Route exact path='/spots/:spotId' component={BookingFormContainer} />
     <Route exact path='/spots' component={MapSearchContainer} />
     <Route exact path='/spots/?search=:query' component={MapSearchContainer} />
   </div>

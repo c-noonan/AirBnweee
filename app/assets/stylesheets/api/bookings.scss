@@ -1,3 +1,75 @@
 // Place all the styles related to the api/bookings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.booking-container {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  min-width: 400px;
+  max-width: 550px;
+  height: auto;
+  font-family: Helvetica Neue;
+  font-size: 13px;
+  color: #686868;
+  letter-spacing: 0.07em;
+  background-color: white;
+  margin-top: -676px;
+  margin-right: 150px;
+  float: right;
+  border: 1px solid #D3D3D3;
+  border-radius: 3px;
+}
+
+.booking-form {
+  width: 100%;
+  padding: 30px;
+  align-items: left;
+}
+
+.booking-form span:first-child {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+#dates {
+  border-top: 1px solid #D3D3D3;
+  padding-top: 25px;
+  padding-bottom: 8px;
+}
+
+#start-date {
+  border: 1px solid #D3D3D3;
+  border-right: none;
+  padding: 7px 10px;
+}
+
+.booking-form img {
+  width: 13px;
+  height: 13px;
+}
+
+#end-date {
+  border: 1px solid #D3D3D3;
+  border-left: none;
+  padding: 7px 10px;
+  margin-bottom: 10px;
+}
+
+#booking-guests {
+  padding-bottom: 8px;
+}
+
+#create-booking-button {
+  display: flex;
+  justify-content: center;
+  background-color: #FD595F;
+  margin-top: 10px;
+  padding: 5px 5px;
+  width: 98%;
+  height: 46px;
+  font-size: 19px;
+  border-radius: 4px;
+  letter-spacing: 0.07em;
+  color: white;
+}
