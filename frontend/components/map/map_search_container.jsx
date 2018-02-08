@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import SpotSearch from './spot_search';
+import MapSpotSearch from './map_spot_search';
 import { fetchSpots } from '../../actions/spots';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -13,4 +13,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SpotSearch);
+)(MapSpotSearch);

@@ -1,0 +1,27 @@
+.search-bar {
+  margin: 100px auto;
+  width: 50%;
+  font-family: Helvetica Neue;
+  color: #484848;
+  letter-spacing: 0.07em;
+  background-color: white;
+}
+
+.search-bar span {
+  font-size: 48px;
+  font-weight: 500;
+  color: #FF5A5F;
+}
+
+.search-bar p {
+  font-size: 48px;
+  font-weight: 300;
+  max-width: 800px;
+  min-width: 600px;
+}
+
+#explore {
+  font-weight: 500;
+  font-size: 28px;
+  color: #484848;
+}
