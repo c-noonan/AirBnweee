@@ -8,6 +8,16 @@ class Login extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  demoLogin(e){
+    const demo = {
+      username: 'username',
+      password: 'password'
+    };
+    e.preventDefault(e);
+    this.props.login(demo)
+      .then(() => this.props.onClose());
+    }
+
   handleSubmit(e){
     e.preventDefault();
     this.props.login(this.state)
@@ -61,6 +71,7 @@ class Login extends React.Component {
             <img src='https://image.freepik.com/iconos-gratis/bloquee-esbozado-simbolo-de-candado-para-la-interfaz-de-seguridad_318-71943.jpg' />
           </label>
           <button className='button' type='submit'>Log In</button>
+          <button className='button' onClick={this.demoLogin}>Demo Login</button>
           <span>
             <p>Don't have an account?</p>
             <button onClick={this.props.onSwitch}>Sign Up!</button>
