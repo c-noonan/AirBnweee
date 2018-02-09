@@ -1,4 +1,4 @@
-spot# Airbnweee
+# Airbnweee
 
 [Live Site](https://airbnweee.herokuapp.com)
 
