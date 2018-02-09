@@ -17,6 +17,8 @@
   margin-right: 150px;
   border: 1px solid #D3D3D3;
   border-radius: 3px;
+  position: sticky;
+  top: 90px;
 }
 
 .booking-form {
@@ -34,6 +36,7 @@
   border-top: 1px solid #D3D3D3;
   padding-top: 25px;
   padding-bottom: 8px;
+  margin-top: 10px;
 }
 
 #start-date {

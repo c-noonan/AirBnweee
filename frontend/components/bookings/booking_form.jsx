@@ -56,7 +56,7 @@ class BookingForm extends React.Component {
     return (
       <div className='booking-container'>
         <form className='booking-form' onSubmit={(e) => this.handleSubmit(e)}>
-          <span>${this.props.spot.price}per night</span>
+          <span>${this.props.spot.price}&nbsp;per night</span>
           <p>
             <p id='dates'>Dates</p>
             <label>
