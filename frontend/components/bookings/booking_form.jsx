@@ -11,11 +11,6 @@ class BookingForm extends React.Component {
     };
   }
 
-  // componentDidMount(){
-  //   this.setState(this.props.fetchSpot(this.props.spot.id));
-  //   console.log(this.state);
-  // }
-
   handleSubmit(e){
     e.preventDefault();
     const booking = Object.assign({}, this.state, {

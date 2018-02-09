@@ -14,11 +14,13 @@ class Booking < ApplicationRecord
     class_name: 'Spot'
 
    def overlapping_requests
+     date = Date.today
      Booking
        .where.not(id: self.id)
        .where(spot_id: spot_id)
-       .where.not('start_date > :end_date OR end_date < :start_date',
-                  start_date: start_date, end_date: end_date)
+       .where.not('(start_date > :end_date AND start_date > :date)
+        OR (end_date < :start_date AND end_date > :date)',
+                  start_date: start_date, end_date: end_date, date: date)
    end
 
    def denied_requests
