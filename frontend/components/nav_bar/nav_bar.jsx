@@ -33,6 +33,7 @@ class NavBar extends React.Component {
             value={this.state.search}
             onChange={this.updateForm("search")}
             />
+          <button id='nav-search-button' onSubmit={this.handleSubmit}>Search</button>
         </form>);
     }
   }

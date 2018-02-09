@@ -43,7 +43,7 @@
   justify-content: space-between;
   border: 1px solid #D3D3D3;
   padding: 10px;
-  width: 100%;
+  width: 98%;
   margin-top: 20px;
   border-radius: 5px;
   background-color: white;
@@ -52,12 +52,28 @@
 #search-form-input {
   width: 100%;
   padding-left: 5px;
+  font-size: 19px;
 }
 
 .search-form img {
   width: 32px;
   height: 32px;
   opacity: 0.5;
+  padding-top: 4px;
+}
+
+#search-button {
+  width: 80px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #FD595F;
+  margin: 5px 5px;
+  padding: 5px 5px;
+  font-size: 15px;
+  border-radius: 4px;
+  letter-spacing: 0.07em;
+  color: white;
 }
 
 .search-errors {

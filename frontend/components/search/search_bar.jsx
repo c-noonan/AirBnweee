@@ -39,6 +39,7 @@ class SearchBar extends React.Component {
             value={this.state.search}
             onChange={this.updateForm("search")}
             />
+          <button id='search-button' onSubmit={this.handleSubmit}>Search</button>
         </form>
         <p id='explore'>
           Explore Airbnweee
