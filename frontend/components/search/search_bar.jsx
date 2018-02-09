@@ -54,7 +54,7 @@ class SearchBar extends React.Component {
 
           <Link to='/spots'>
             <li className='universal-studios'>
-              <img src='https://cdn.pixabay.com/photo/2016/09/02/22/58/universal-studios-1640516_960_720.jpg'/>
+              <img src='https://images.unsplash.com/photo-1501256504904-1fbe305bb538?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b765ff3866bb2594a208a58933a996d&auto=format&fit=crop&w=1350&q=80'/>
             </li>
           </Link>
 
