@@ -17,13 +17,8 @@ class BookingForm extends React.Component {
       spot_id: parseInt(this.props.match.params.spotId),
     });
     this.props.createBooking(booking)
-      .then(() => this.props.history.push(`/spots/${this.props.match.params.spotId}`));
-    this.setState({
-      start_date: '',
-      end_date: '',
-      guests: ''
-    });
-    this.clearErrors();
+      .then(() => this.props.history.push(`/spots/${this.props.match.params.spotId}`))
+      .then(() => this.setState({ start_date: '', end_date: '', guests: '' }));
   }
 
   updateForm(field){
