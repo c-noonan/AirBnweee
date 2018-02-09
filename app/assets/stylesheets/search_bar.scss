@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 125px;
+  padding-top: 135px;
   position: relative;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .search-bar {
-  margin: 50px auto;
+  margin: 35px auto;
   width: 50%;
   font-family: Helvetica Neue;
   color: #484848;
@@ -26,7 +26,10 @@
 }
 
 .search-bar span {
-  font-size: 48px;
+  font-size: 100px;
+  // font-family: 'Lobster', cursive;
+  font-family: 'Damion', cursive;
+  line-height: 90px;
   font-weight: 500;
   color: #FF5A5F;
 }
@@ -97,7 +100,7 @@
   font-weight: 500;
   font-size: 28px;
   color: #484848;
-  padding-top: 150px;
+  padding-top: 130px;
   padding-bottom: 10px;
   width: 100%;
 }
