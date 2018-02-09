@@ -32,7 +32,7 @@ class Api::SpotsController < ApplicationController
     if params[:search]
       query_string = "%#{params[:search]}%"
       final_query_string = query_string.downcase
-      @spots = Spot.where('title LIKE ? OR description LIKE ? OR lat LIKE ? OR long LIKE ?', final_query_string, final_query_string)
+      @spots = Spot.where('title LIKE ? OR description LIKE ?', final_query_string, final_query_string)
     else
       @spots = Spot.all
     end
