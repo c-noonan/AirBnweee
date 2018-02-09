@@ -6,6 +6,7 @@ const style = {
     right             : 0,
     bottom            : 0,
     backgroundColor   : 'rgba(0, 0, 0, 0.75)',
+    zIndex            : 500
   },
   content : {
     borderRadius      : '0px',
