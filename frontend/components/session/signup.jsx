@@ -72,8 +72,8 @@ class Signup extends React.Component {
               />
             <img src='https://image.freepik.com/iconos-gratis/bloquee-esbozado-simbolo-de-candado-para-la-interfaz-de-seguridad_318-71943.jpg' />
           </label>
-          <button className='button' type='submit'>Sign Up</button>
-          <button className='button' onClick={this.demoLogin}>Demo Login</button>
+          <input className='button' type='submit' value='Sign up'/>
+          <button className='button' type='button' onClick={this.demoLogin}>Demo Login</button>
           <span>
             <p>Already have an account?</p>
             <button onClick={this.props.onSwitch}>Log In!</button>
