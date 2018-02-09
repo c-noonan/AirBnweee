@@ -28,18 +28,20 @@ class BookingForm extends React.Component {
       end_date: '',
       guests: ''
     });
+    this.clearErrors();
   }
 
   updateForm(field){
     return(e) => (
-      this.setState({ [field]: e.target.value }),
-      this.props.clearErrors()
+      this.setState({ [field]: e.target.value })
     );
   }
 
   renderErrors(){
     if (!this.props.errors) {
-      return;
+      return (
+        <p>Congratulations! You're booked!</p>
+      );
     }
     return(
       <ul>
@@ -78,6 +80,7 @@ class BookingForm extends React.Component {
           </p>
           <p id='booking-guests'>Guests</p>
           <select className='dropdown' value={this.state.guests} onChange={this.updateForm('guests')}>
+            <option value='0'>0</option>
             <option value='1'>1</option>
             <option value='2'>2</option>
             <option value='3'>3</option>
