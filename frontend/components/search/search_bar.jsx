@@ -29,7 +29,7 @@ class SearchBar extends React.Component {
       <div className='background'></div>
       <div className='search-bar'>
         <span>Airbnweee</span>
-        <p>Book homes around the world near all your favorite themeparks!</p>
+        <p>Book homes around the world near all your favorite theme parks!</p>
         <form className='search-form' onSubmit={this.handleSubmit}>
           <img src='https://d30y9cdsu7xlg0.cloudfront.net/png/15028-200.png'/>
           <input
