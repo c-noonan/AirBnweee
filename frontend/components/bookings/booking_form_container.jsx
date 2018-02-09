@@ -6,9 +6,8 @@ import { clearErrors } from '../../actions/errors';
 import { fetchSpot } from '../../actions/spots';
 
 const mapStateToProps = (state, ownProps) => {
-  console.warn(ownProps);
   return {
-    spot: [ownProps.match.params.spotId],
+    spot: ownProps.spot,
     errors: state.errors
   };
 };

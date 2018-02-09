@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewContainer from '../reviews/review_container';
+import BookingFormContainer from '../bookings/booking_form_container';
 
 class SpotShow extends React.Component {
 
@@ -45,6 +46,7 @@ class SpotShow extends React.Component {
           </ul>
         </ul>
         <ReviewContainer />
+        <BookingFormContainer spot={this.props.spot}/>
       </div>
     );
   }

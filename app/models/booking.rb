@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
-  validates :user_id, :spot_id, :start_date, :end_date, :guests presence: true
+  validates :user_id, :spot_id, :start_date, :end_date, :guests, presence: true
 
   belongs_to :user,
     primary_key: :id,

@@ -1,13 +1,15 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  width: auto;
+  width: 100%;
   height: 80px;
   font-family: Helvetica Neue;
   font-size: 13px;
   color: #686868;
   letter-spacing: 0.07em;
   background-color: white;
+  position: fixed;
+  z-index: 500;
 }
 
 .navbar-links {

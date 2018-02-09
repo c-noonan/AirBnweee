@@ -57,7 +57,6 @@ class BookingForm extends React.Component {
       <div className='booking-container'>
         <form className='booking-form' onSubmit={(e) => this.handleSubmit(e)}>
           <span>${this.props.spot.price}per night</span>
-          <p id='errors'>{this.renderErrors()}</p>
           <p>
             <p id='dates'>Dates</p>
             <label>
@@ -78,16 +77,17 @@ class BookingForm extends React.Component {
             </label>
           </p>
           <p id='booking-guests'>Guests</p>
-          <select className='dropdown'>
-            <option onChange={this.updateForm('guests')} value='1'>1</option>
-            <option onChange={this.updateForm('guests')} value='2'>2</option>
-            <option onChange={this.updateForm('guests')} value='3'>3</option>
-            <option onChange={this.updateForm('guests')} value='4'>4</option>
-            <option onChange={this.updateForm('guests')} value='5'>5</option>
-            <option onChange={this.updateForm('guests')} value='6'>6</option>
-            <option onChange={this.updateForm('guests')} value='7'>7</option>
-            <option onChange={this.updateForm('guests')} value='8'>8</option>
+          <select className='dropdown' value={this.state.guests} onChange={this.updateForm('guests')}>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
           </select>
+          <p id='errors'>{this.renderErrors()}</p>
           <input id='create-booking-button' type='submit' value='Check Availability'/>
         </form>
       </div>
