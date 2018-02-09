@@ -46,19 +46,19 @@ class SearchBar extends React.Component {
         </p>
         <ul className='themeparks'>
 
-          <Link to='/spots'>
+          <Link to='/spots/?search=Disneyland'>
             <li className='disneyland'>
               <img src='https://images.unsplash.com/photo-1484923720570-4bc210954735?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=039cf9c30be0686b5287cd43e45de854&auto=format&fit=crop&w=750&q=80'/>
             </li>
           </Link>
 
-          <Link to='/spots'>
+          <Link to='/spots/?search=Universal-Studios'>
             <li className='universal-studios'>
               <img src='https://images.unsplash.com/photo-1501256504904-1fbe305bb538?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b765ff3866bb2594a208a58933a996d&auto=format&fit=crop&w=1350&q=80'/>
             </li>
           </Link>
 
-          <Link to='/spots'>
+          <Link to='/spots/?search=Six-Flags'>
             <li className='six-flags'>
               <img src='https://images.unsplash.com/photo-1505731110654-99d7f7f8e39c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ddd2e325a9114d0996dd4ea74d89400a&auto=format&fit=crop&w=667&q=80'/>
             </li>
