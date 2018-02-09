@@ -62,7 +62,7 @@ class SpotIndexItem extends React.Component {
       <div>
         <button onClick={() => this.openModal()}>
           <ul className='list-elements'>
-            <div id='image-holder'><img src={this.props.spot.image_url} /></div>
+            <div id='image-holder'><img src={this.props.spot.image_url}/></div>
             <span>
               <li id='header'>
                 ENTIRE PLACE

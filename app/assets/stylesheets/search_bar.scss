@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 150px;
+  padding-top: 125px;
   position: relative;
 }
 
@@ -89,7 +89,8 @@
 .themeparks {
   display: flex;
   justify-content: space-between;
-  min-width: 850px;
+  min-width: 800px;
+  padding-bottom: 60px;
 }
 
 .disneyland {
