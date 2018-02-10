@@ -8,8 +8,9 @@
   color: #686868;
   letter-spacing: 0.07em;
   background-color: white;
-  margin: 70px 150px;
-  width: 50%;
+  margin: 70px 0px;
+  margin-left: 17%;
+  width: 80%;
 }
 
 #reviews-title {
@@ -21,6 +22,7 @@
 .review-index {
   padding: 10px 0px;
   width: 100%;
+  max-width: 800px;
   min-height: 100px;
   border-bottom: 1px solid #D3D3D3;
 }
