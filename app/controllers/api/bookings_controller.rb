@@ -7,6 +7,7 @@ class Api::BookingsController < ApplicationController
     if current_user
       @booking = Booking.new(booking_params)
       @booking.user_id = current_user.id
+      @booking.spot_id ||= booking_params[:spot_id]
       if @booking.save
         render '/api/spots/show'
       else

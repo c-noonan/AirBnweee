@@ -29,8 +29,8 @@ class BookingForm extends React.Component {
 
   renderErrors(){
     if (!this.props.errors) {
-      return (
-        <p>Congratulations! You're booked!</p>
+      return(
+        <p>Congratulations! You've booked!</p>
       );
     }
       return(
