@@ -82,4 +82,4 @@ Include a form to allow a user to become a host.
 
 * Create a rating system so an amount of stars can be given and seen for each spot and review. In addition, the rating can then be seen in the booking form which should also limit the options of guest to whatever the host specified was the max number of people that could stay at their home.
 
-* Messaging system between host and user.
+* Design a messaging system between host and user.
