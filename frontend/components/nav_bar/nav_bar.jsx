@@ -94,7 +94,7 @@ class NavBar extends React.Component {
     ) : (
       <div className='navbar-links'>
         <Link to='/'>Become a Host</Link>
-        <Link to='/'>Help</Link>
+        <a href="https://github.com/c-noonan" target='_blank'>Help</a>
         <button id='session' onClick={() => this.openModal(true)}>Sign Up</button>
         <button id='session' onClick={() => this.openModal(false)}>Log In</button>
       </div>
