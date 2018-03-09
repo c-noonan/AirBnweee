@@ -42,9 +42,9 @@
 
   background-repeat: repeat;
   background-attachment: absolute;
-  -webkit-animation: backgroundScroll 20s linear 1;
+  -webkit-animation: backgroundScroll 20s linear infinite;
   -webkit-animation-fill-mode: forwards;
-  animation: backgroundScroll 20s linear 1;
+  animation: backgroundScroll 20s linear infinite;
   animation-fill-mode: forwards;
 }
 
@@ -131,6 +131,7 @@
   display: flex;
   flex-direction: column;
   width: 80%;
+  color: #484848;
 }
 
 #explore {
@@ -146,11 +147,11 @@
   display: flex;
   justify-content: space-between;
   min-width: 800px;
-  margin-bottom: 10px;
+  margin-bottom: 35px;
 }
 
 .disneyland {
-  width: 250px;
+  width: 240px;
   height: 80px;
   position: relative;
   display: flex;
@@ -166,6 +167,7 @@
 .disneyland img {
   width: 45%;
   height: 100%;
+  border-radius: 2px;
 }
 
 .disneyland:after {
@@ -179,10 +181,11 @@
   position: absolute;
   width: 100%; height: 100%;
   top:0; left:0;
-  background:rgba(0,0,0,0.6);
+  background:rgba(0,0,0,0.7);
   opacity: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
+  border: none;
 }
 
 .disneyland:hover:after {
@@ -190,7 +193,7 @@
 }
 
 .universal-studios {
-  width: 250px;
+  width: 240px;
   height: 80px;
   position: relative;
   display: flex;
@@ -206,6 +209,7 @@
 .universal-studios img {
   width: 45%;
   height: 100%;
+  border-radius: 2px;
 }
 
 .universal-studios:after {
@@ -219,10 +223,11 @@
   position: absolute;
   width: 100%; height: 100%;
   top:0; left:0;
-  background:rgba(0,0,0,0.6);
+  background:rgba(0,0,0,0.7);
   opacity: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
+  border: none;
 }
 
 .universal-studios:hover:after {
@@ -230,12 +235,12 @@
 }
 
 .six-flags {
-  width: 250px;
+  width: 240px;
   height: 80px;
   position: relative;
   display: flex;
   border: 1px solid rgb(240, 238, 238);
-  border-radius: 3px;
+  border-radius: 2px;
   align-items: center;
 }
 
@@ -245,6 +250,7 @@
 .six-flags img {
   width: 45%;
   height: 100%;
+  border-radius: 2px;
 }
 
 .six-flags:after {
@@ -258,10 +264,11 @@
   position: absolute;
   width: 100%; height: 100%;
   top:0; left:0;
-  background:rgba(0,0,0,0.6);
+  background:rgba(0,0,0,0.7);
   opacity: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
+  border: none;
 }
 
 .six-flags:hover:after {
@@ -269,7 +276,7 @@
 }
 
 .explore-all {
-  width: 250px;
+  width: 240px;
   height: 80px;
   position: relative;
   display: flex;
@@ -285,6 +292,7 @@
 .explore-all img {
   width: 45%;
   height: 100%;
+  border-radius: 2px;
 }
 
 .explore-all:after {
@@ -298,10 +306,11 @@
   position: absolute;
   width: 100%; height: 100%;
   top:0; left:0;
-  background:rgba(0,0,0,0.6);
+  background:rgba(0,0,0,0.7);
   opacity: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
+  border: none;
 }
 
 .explore-all:hover:after {
