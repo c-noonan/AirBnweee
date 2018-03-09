@@ -5,18 +5,9 @@ class Login extends React.Component {
   constructor(props){
     super(props);
     this.state = { username: '', password: '' };
+    this.demoLogin = this.demoLogin.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  demoLogin(e){
-    const demo = {
-      username: 'username',
-      password: 'password'
-    };
-    e.preventDefault(e);
-    this.props.login(demo)
-      .then(() => this.props.onClose());
-    }
 
   handleSubmit(e){
     e.preventDefault();
@@ -29,6 +20,16 @@ class Login extends React.Component {
     return(e) => {
       this.setState({ [field]: e.target.value });
     };
+  }
+
+  demoLogin(e) {
+    const demo = {
+      username: 'username',
+      password: 'password'
+    };
+    e.preventDefault(e);
+    this.props.login(demo)
+      .then(() => this.props.onClose());
   }
 
   renderErrors(){
@@ -71,6 +72,7 @@ class Login extends React.Component {
             <img src='https://image.freepik.com/iconos-gratis/bloquee-esbozado-simbolo-de-candado-para-la-interfaz-de-seguridad_318-71943.jpg' />
           </label>
           <input className='button' type='submit' name='Log In' />
+          <button className='button' type='button' onClick={this.demoLogin}>Demo Login</button>
           <span>
             <p>Don't have an account?</p>
             <button onClick={this.props.onSwitch}>Sign Up!</button>
