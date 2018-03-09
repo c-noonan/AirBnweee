@@ -158,10 +158,12 @@
   border: 1px solid rgb(240, 238, 238);
   border-radius: 3px;
   align-items: center;
+  box-shadow: 0 1px 1px #D3D3D3;
 }
 
 .disneyland p {
   margin-left: 10px;
+  letter-spacing: 0.03em;
 }
 
 .disneyland img {
@@ -179,17 +181,17 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 100%; height: 100%;
+  width: 100%; height: 101%;
   top:0; left:0;
   background:rgba(0,0,0,0.7);
   opacity: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
-  border: none;
+  letter-spacing: 0.05em;
 }
 
 .disneyland:hover:after {
-    opacity: 1;
+  opacity: 1;
 }
 
 .universal-studios {
@@ -200,10 +202,12 @@
   border: 1px solid rgb(240, 238, 238);
   border-radius: 3px;
   align-items: center;
+  box-shadow: 0 1px 1px #D3D3D3;
 }
 
 .universal-studios p {
   margin-left: 10px;
+  letter-spacing: 0.03em;
 }
 
 .universal-studios img {
@@ -221,13 +225,14 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 100%; height: 100%;
+  width: 100%; height: 101%;
   top:0; left:0;
   background:rgba(0,0,0,0.7);
   opacity: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   border: none;
+  letter-spacing: 0.05em;
 }
 
 .universal-studios:hover:after {
@@ -242,10 +247,12 @@
   border: 1px solid rgb(240, 238, 238);
   border-radius: 2px;
   align-items: center;
+  box-shadow: 0 1px 1px #D3D3D3;
 }
 
 .six-flags p {
   margin-left: 10px;
+  letter-spacing: 0.03em;
 }
 .six-flags img {
   width: 45%;
@@ -262,13 +269,14 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 100%; height: 100%;
+  width: 100%; height: 101%;
   top:0; left:0;
   background:rgba(0,0,0,0.7);
   opacity: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   border: none;
+  letter-spacing: 0.05em;
 }
 
 .six-flags:hover:after {
@@ -283,10 +291,12 @@
   border: 1px solid rgb(240, 238, 238);
   border-radius: 3px;
   align-items: center;
+  box-shadow: 0 1px 1px #D3D3D3;
 }
 
 .explore-all p {
   margin-left: 10px;
+  letter-spacing: 0.03em;
 }
 
 .explore-all img {
@@ -304,13 +314,14 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 100%; height: 100%;
+  width: 100%; height: 101%;
   top:0; left:0;
   background:rgba(0,0,0,0.7);
   opacity: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   border: none;
+  letter-spacing: 0.05em;
 }
 
 .explore-all:hover:after {
