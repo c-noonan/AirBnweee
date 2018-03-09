@@ -29,7 +29,7 @@
   background-size: cover;
   margin: 35px auto;
   width: 100%;
-  min-width: 1000px;
+  min-width: 700px;
   height: 650px;
   font-family: Helvetica Neue;
   color: #484848;
@@ -126,30 +126,46 @@
   text-decoration: underline;
 }
 
+.explore-section {
+  font-family: Helvetica Neue;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
 #explore {
   font-weight: 500;
   font-size: 28px;
   color: #484848;
-  padding-top: 130px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   width: 100%;
+  letter-spacing: 0.03em;
 }
 
 .themeparks {
   display: flex;
   justify-content: space-between;
   min-width: 800px;
-  padding-bottom: 60px;
+  margin-bottom: 10px;
 }
 
 .disneyland {
-  width: 200px;
-  height: 150px;
+  width: 250px;
+  height: 80px;
   position: relative;
+  display: flex;
+  border: 1px solid rgb(240, 238, 238);
+  border-radius: 3px;
+  align-items: center;
+}
+
+.disneyland p {
+  margin-left: 10px;
 }
 
 .disneyland img {
-  width: 100%;
+  width: 45%;
+  height: 100%;
 }
 
 .disneyland:after {
@@ -161,7 +177,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 100%; height: 88%;
+  width: 100%; height: 100%;
   top:0; left:0;
   background:rgba(0,0,0,0.6);
   opacity: 0;
@@ -174,14 +190,22 @@
 }
 
 .universal-studios {
-  width: 200px;
-  height: 150px;
+  width: 250px;
+  height: 80px;
   position: relative;
+  display: flex;
+  border: 1px solid rgb(240, 238, 238);
+  border-radius: 3px;
+  align-items: center;
+}
+
+.universal-studios p {
+  margin-left: 10px;
 }
 
 .universal-studios img {
-  width: 100%;
-  height: 88%;
+  width: 45%;
+  height: 100%;
 }
 
 .universal-studios:after {
@@ -193,7 +217,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 100%; height: 88%;
+  width: 100%; height: 100%;
   top:0; left:0;
   background:rgba(0,0,0,0.6);
   opacity: 0;
@@ -206,14 +230,21 @@
 }
 
 .six-flags {
-  width: 200px;
-  height: 150px;
+  width: 250px;
+  height: 80px;
   position: relative;
+  display: flex;
+  border: 1px solid rgb(240, 238, 238);
+  border-radius: 3px;
+  align-items: center;
 }
 
+.six-flags p {
+  margin-left: 10px;
+}
 .six-flags img {
-  width: 100%;
-  height: 88%
+  width: 45%;
+  height: 100%;
 }
 
 .six-flags:after {
@@ -225,7 +256,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 100%; height: 88%;
+  width: 100%; height: 100%;
   top:0; left:0;
   background:rgba(0,0,0,0.6);
   opacity: 0;
@@ -238,14 +269,22 @@
 }
 
 .explore-all {
-  width: 200px;
-  height: 150px;
+  width: 250px;
+  height: 80px;
   position: relative;
+  display: flex;
+  border: 1px solid rgb(240, 238, 238);
+  border-radius: 3px;
+  align-items: center;
+}
+
+.explore-all p {
+  margin-left: 10px;
 }
 
 .explore-all img {
-  width: 100%;
-  height: 88%;
+  width: 45%;
+  height: 100%;
 }
 
 .explore-all:after {
@@ -257,7 +296,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 100%; height: 88%;
+  width: 100%; height: 100%;
   top:0; left:0;
   background:rgba(0,0,0,0.6);
   opacity: 0;
