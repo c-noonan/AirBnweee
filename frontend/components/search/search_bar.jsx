@@ -45,6 +45,7 @@ class SearchBar extends React.Component {
     }
 
   render() {
+    
     return (
       <div className="general-container">
         <div className="search-bar">
