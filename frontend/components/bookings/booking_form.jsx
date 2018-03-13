@@ -12,6 +12,11 @@ class BookingForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+  
+  componentWillUnmount() {
+    console.warn(this.props)
+    this.props.clearBooking();
+  }
 
   handleSubmit(e){
     e.preventDefault();

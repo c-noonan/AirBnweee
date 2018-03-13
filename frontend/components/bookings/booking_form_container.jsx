@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import BookingForm from './booking_form';
 import { createBooking } from '../../actions/bookings';
 import { withRouter } from 'react-router-dom';
-import { clearErrors } from '../../actions/bookings';
+import { clearErrors, clearBooking } from '../../actions/bookings';
 import { fetchSpot } from '../../actions/spots';
 
 const mapStateToProps = (state, ownProps) => {
@@ -16,7 +16,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => ({
   createBooking: booking => dispatch(createBooking(booking)),
   clearErrors: () => dispatch(clearErrors()),
-  fetchSpot: (id) => dispatch(fetchSpot(id))
+  fetchSpot: (id) => dispatch(fetchSpot(id)),
+  clearBooking: () => dispatch(clearBooking())
 });
 
 export default withRouter(connect(

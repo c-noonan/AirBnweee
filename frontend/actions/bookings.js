@@ -44,3 +44,7 @@ export const createBooking = (booking) => dispatch => {
 export const clearErrors = () => dispatch => {
   return dispatch(receiveErrors([]));
 };
+
+export const clearBooking = () => dispatch => {
+  return dispatch(receiveBooking({}));
+};
