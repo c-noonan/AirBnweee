@@ -8,7 +8,7 @@ export default (oldState = {}, action) => {
     case RECEIVE_ALL_BOOKINGS:
       return _.merge({}, action.bookings);
     case RECEIVE_BOOKING:
-      return _.merge({}, oldState, {[action.booking.id]: action.booking});
+      return _.merge({}, oldState, action.booking );
     default:
       return oldState;
   }

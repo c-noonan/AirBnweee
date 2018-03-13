@@ -1,9 +1,11 @@
 import * as APIUtil from '../util/reviews';
-import { receiveErrors } from './errors';
+// import { receiveErrors } from './errors';
 
 export const RECEIVE_ALL_REVEIWS = "RECEIVE_REVEIWS";
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const REMOVE_REVIEW = "REMOVE_REVIEW";
+export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
+// export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
 export const receiveAllReviews = (reviews) => ({
   type: RECEIVE_ALL_REVEIWS,
@@ -18,6 +20,11 @@ export const receiveReview = (review) => ({
 export const removeReview = (reviewId) => ({
   type: REMOVE_REVIEW,
   reviewId
+});
+
+export const receiveErrors = errors => ({
+  type: RECEIVE_REVIEW_ERRORS,
+  errors
 });
 
 export const requestReviews = () => dispatch => {
@@ -53,4 +60,8 @@ export const deleteReview = (id) => dispatch => {
     serverReview => dispatch(removeReview(id)),
     err => (dispatch(receiveErrors(err.responseJSON)))
   );
+};
+
+export const clearErrors = () => dispatch => {
+  return dispatch(receiveErrors([]));
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter, Redirect } from "react-router-dom";
 
 class BookingForm extends React.Component {
 
@@ -9,6 +10,7 @@ class BookingForm extends React.Component {
       end_date: '',
       guests: ''
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e){
@@ -16,10 +18,22 @@ class BookingForm extends React.Component {
     const booking = Object.assign({}, this.state, {
       spot_id: parseInt(this.props.match.params.spotId),
     });
+    this.props.clearErrors();
     this.props.createBooking(booking)
+      // .then(() => window.alert("Congrats you are booked!"))
       .then(() => this.props.history.push(`/spots/${this.props.match.params.spotId}`))
       .then(() => this.setState({ start_date: '', end_date: '', guests: '' }));
   }
+
+//     const spotId = parseInt(this.props.match.params.spotId);
+//     const booking = Object.assign({}, this.state, { spot_id: spotId });
+//     this.props.clearErrors();
+//     this.props
+//       .createBooking(booking)
+//       .then(() =>
+//         this.props.history.push(`/users/${this.props.currentUser.id}`)
+//       );
+//   }
 
   updateForm(field){
     return(e) => (
@@ -29,9 +43,7 @@ class BookingForm extends React.Component {
 
   renderErrors(){
     if (!this.props.errors) {
-      return(
-        <p>Congratulations! You've booked!</p>
-      );
+      return;
     }
       return(
         <ul>
@@ -44,14 +56,44 @@ class BookingForm extends React.Component {
       );
     }
 
+  renderBooking(){
+    if (!this.props.booking) {
+      return;
+    }
+      return (
+        <ul>
+          {this.props.booking.map((booking, i) => (
+            <li key={`booking-${i}`}>
+              {booking}
+            </li>
+          ))}
+        </ul>
+      );
+  }
+
+  // renderErrors() {
+  //   if (!this.props.errors) {
+  //     return;
+  //   }
+  //   return (
+  //     <ul>
+  //       <li id="booking-errors">{this.props.errors[0]}</li>
+  //     </ul>
+  //   );
+  // }
+
   render(){
+    console.warn(this.props);
+    
+    
     return (
       <div className='booking-container'>
-        <form className='booking-form' onSubmit={(e) => this.handleSubmit(e)}>
+        <form className='booking-form' onSubmit={this.handleSubmit}>
           <span>${this.props.spot.price}&nbsp;per night</span>
           <p>
             <p id='dates'>Dates</p>
             <label>
+              {" "}
               <input
                 id='start-date'
                 type='date'
@@ -60,6 +102,7 @@ class BookingForm extends React.Component {
               />
             </label>
             <label>
+              {" "}
               <input
                 id='end-date'
                 type='date'
@@ -81,6 +124,7 @@ class BookingForm extends React.Component {
             <option value='8'>8</option>
           </select>
           <p id='errors'>{this.renderErrors()}</p>
+          <p id='errors'>{this.renderBooking()}</p>
           <input id='create-booking-button' type='submit' value='Check Availability'/>
         </form>
       </div>
@@ -89,4 +133,34 @@ class BookingForm extends React.Component {
 
 }
 
-export default BookingForm;
+  // render() {
+  //   return (
+  //     <div>
+  //       <form onSubmit={this.handleSubmit}>
+  //         {this.renderErrors()}
+  //         <label>
+  //           {" "}
+  //           <h2>Check In</h2>
+  //           <input
+  //             id="check-in-date"
+  //             type="date"
+  //             onChange={this.update("start_date")}
+  //           />
+  //         </label>
+  //         <label>
+  //           {" "}
+  //           <h2>Check Out</h2>
+  //           <input
+  //             id="check-out-date"
+  //             type="date"
+  //             onChange={this.update("end_date")}
+  //           />
+  //         </label>
+  //         <input id="booking-form-submit" type="submit" value="Book Doghouse" />
+  //       </form>
+  //     </div>
+  //   );
+  // }
+
+export default withRouter(BookingForm);
+

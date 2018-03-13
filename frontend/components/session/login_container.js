@@ -3,7 +3,7 @@ import { login } from "../../actions/session";
 import Login from './login';
 
 const mapStateToProps = (state, ownProps) => ({
-  errors: state.errors
+  errors: state.errors.session
 });
 
 const mapDispatchToProps = (dispatch) => ({
