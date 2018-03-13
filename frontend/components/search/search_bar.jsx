@@ -1,44 +1,72 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      search: ''
+      search: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(e){
+  handleSubmit(e) {
     e.preventDefault();
-    this.props.fetchSpots(this.state.search)
-      .then(() => this.props.history.push(`/spots/?search=${this.state.search}`));
+    this.props
+      .fetchSpots(this.state.search)
+      .then(() =>
+        this.props.history.push(`/spots/?search=${this.state.search}`)
+      );
   }
 
-  updateForm(field){
-    return(e) => (
-      this.setState({ [field]: e.target.value })
-    );
-  }
+  updateForm(field) {
+    return e => {
+      this.setState({ [field]: e.target.value });
+      if (
+        e.target.value.length > 1 &&
+        (this.props.location.pathname === "/spots" ||
+          this.props.location.search ||
+          this.props.location.pathname === "/spots/")
+        ) {
+          this.props.fetchSpots(this.state.search);
+        } else if (
+          e.target.value.length === 0 &&
+          this.props.location.pathname === "/spots"
+        ) {
+          this.props.fetchSpots();
+        } else if (
+          e.target.value.length === 0 &&
+          (this.props.location.pathname === "/spots/" ||
+            this.props.location.search)
+        ) {
+          this.props.fetchSpots();
+        }
+      };
+    }
 
-  render(){
-    return <div className="general-container">
+  render() {
+    return (
+      <div className="general-container">
         <div className="search-bar">
           <span>Airbnweee</span>
-          <p> Book homes around the world <br />
+          <p>
+            {" "}
+            Book homes around the world <br />
             near all your favorite theme parks.
           </p>
           <form className="search-form" onSubmit={this.handleSubmit}>
             <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/15028-200.png" />
-            <input id="search-form-input" type="text" placeholder="Discover adventure..." value={this.state.search} onChange={this.updateForm("search")} />
-            <button id="search-button" onSubmit={this.handleSubmit}>
-              Search
-            </button>
+            <input
+              id="search-form-input"
+              type="text"
+              placeholder="Discover adventure..."
+              value={this.state.search}
+              onChange={this.updateForm("search")}
+            />
+            <input id="search-button" type='submit' value='Search'/>
           </form>
         </div>
-        <div className='explore-section'>
+        <div className="explore-section">
           <p id="explore">Explore Airbnweee</p>
           <ul className="themeparks">
             <Link to="/spots/?search=disneyland">
@@ -70,9 +98,9 @@ class SearchBar extends React.Component {
             </Link>
           </ul>
         </div>
-      </div>;
+      </div>
+    );
   }
-
 }
 
-export default SearchBar;
+export default withRouter(SearchBar);
