@@ -20,20 +20,9 @@ class BookingForm extends React.Component {
     });
     this.props.clearErrors();
     this.props.createBooking(booking)
-      // .then(() => window.alert("Congrats you are booked!"))
       .then(() => this.props.history.push(`/spots/${this.props.match.params.spotId}`))
       .then(() => this.setState({ start_date: '', end_date: '', guests: '' }));
   }
-
-//     const spotId = parseInt(this.props.match.params.spotId);
-//     const booking = Object.assign({}, this.state, { spot_id: spotId });
-//     this.props.clearErrors();
-//     this.props
-//       .createBooking(booking)
-//       .then(() =>
-//         this.props.history.push(`/users/${this.props.currentUser.id}`)
-//       );
-//   }
 
   updateForm(field){
     return(e) => (
@@ -59,32 +48,17 @@ class BookingForm extends React.Component {
   renderBooking(){
     if (!this.props.booking) {
       return;
-    }
-      return (
-        <ul>
-          {this.props.booking.map((booking, i) => (
-            <li key={`booking-${i}`}>
-              {booking}
-            </li>
-          ))}
-        </ul>
-      );
+    } else if (this.props.booking.length !== 0)
+      return <ul>
+          <li>Congratulations! You're booked!</li>
+          <li>
+            Dates: {this.props.booking[0]} - {this.props.booking[1]}
+          </li>
+          <li>Guests: {this.props.booking[2]}</li>
+        </ul>;
   }
 
-  // renderErrors() {
-  //   if (!this.props.errors) {
-  //     return;
-  //   }
-  //   return (
-  //     <ul>
-  //       <li id="booking-errors">{this.props.errors[0]}</li>
-  //     </ul>
-  //   );
-  // }
-
-  render(){
-    console.warn(this.props);
-    
+  render(){    
     
     return (
       <div className='booking-container'>
@@ -132,35 +106,6 @@ class BookingForm extends React.Component {
   }
 
 }
-
-  // render() {
-  //   return (
-  //     <div>
-  //       <form onSubmit={this.handleSubmit}>
-  //         {this.renderErrors()}
-  //         <label>
-  //           {" "}
-  //           <h2>Check In</h2>
-  //           <input
-  //             id="check-in-date"
-  //             type="date"
-  //             onChange={this.update("start_date")}
-  //           />
-  //         </label>
-  //         <label>
-  //           {" "}
-  //           <h2>Check Out</h2>
-  //           <input
-  //             id="check-out-date"
-  //             type="date"
-  //             onChange={this.update("end_date")}
-  //           />
-  //         </label>
-  //         <input id="booking-form-submit" type="submit" value="Book Doghouse" />
-  //       </form>
-  //     </div>
-  //   );
-  // }
 
 export default withRouter(BookingForm);
 
