@@ -124,23 +124,17 @@ class NavBar extends React.Component {
       </Modal>
     );
 
-    const display = this.props.currentUser ? (
-      <div className="navbar-links">
+    const display = this.props.currentUser ? <div className="navbar-links">
         <p>Hello, {this.props.currentUser.username}</p>
-        <Link
-          to="/"
-          onClick={() => {
+        <Link to="/" onClick={() => {
             this.props.logout();
             this.props.clearErrors();
-          }}
-        >
+          }}>
           Logout
         </Link>
-      </div>
-    ) : (
-      <div className="navbar-links">
+      </div> : <div className="navbar-links">
         <Link to="/">Become a Host</Link>
-        <a href="https://github.com/c-noonan" target="_blank">
+        <a href="https://github.com/c-noonan" target="_blank" rel="noopener noreferrer">
           Help
         </a>
         <button id="session" onClick={() => this.openModal(true)}>
@@ -149,8 +143,7 @@ class NavBar extends React.Component {
         <button id="session" onClick={() => this.openModal(false)}>
           Log In
         </button>
-      </div>
-    );
+      </div>;
 
     return (
       <div className="navbar">
